@@ -1,0 +1,181 @@
+"use client";
+
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { 
+  Container, 
+  Battery, 
+  Zap, 
+  Clock, 
+  Gauge, 
+  Truck, 
+  Home,
+  Wind 
+} from "lucide-react";
+// import Image from "next/image"; // Uncomment when adding the actual image
+
+const features = [
+  {
+    icon: Container,
+    title: "40-foot containerized platform",
+    description: "Complete mobility and rapid deployment"
+  },
+  {
+    icon: Zap,
+    title: "Fully integrated CAE + generator",
+    description: "Proprietary compressed air engine technology"
+  },
+  {
+    icon: Battery,
+    title: "Optional 1.5MW BESS battery storage",
+    description: "Enhanced capacity and load balancing"
+  },
+  {
+    icon: Clock,
+    title: "Runs up to 16 hours continuously",
+    description: "Extended operation without refueling"
+  },
+  {
+    icon: Gauge,
+    title: "3-minute refill time per air tank",
+    description: "Rapid turnaround for continuous operation"
+  },
+  {
+    icon: Truck,
+    title: "Truck-mountable or stationary installation",
+    description: "Maximum flexibility for any deployment"
+  },
+  {
+    icon: Home,
+    title: "Powers up to 400 homes per day",
+    description: "Industrial-scale clean energy solution"
+  },
+  {
+    icon: Wind,
+    title: "Zero emissions, cold air exhaust",
+    description: "Clean power with useful cooling byproduct"
+  }
+];
+
+export default function ProductIntro() {
+  return (
+    <section id="products" className="py-24 bg-background">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        {/* Header */}
+        <div className="mx-auto max-w-3xl text-center mb-16">
+          <Badge variant="secondary" className="mb-4">
+            Revolutionary Technology
+          </Badge>
+          <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+            Introducing the
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
+              AirPower Station
+            </span>
+          </h2>
+          <p className="mt-6 text-xl leading-8 text-muted-foreground">
+            The fully integrated, containerized energy platform.
+          </p>
+        </div>
+
+        {/* Main Content */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+          {/* Video Section */}
+          <div className="relative">
+            <div className="aspect-[4/3] relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 border border-border">
+              {/* AirPower Station Video */}
+              <video
+                className="absolute inset-0 w-full h-full object-cover"
+                autoPlay
+                loop
+                muted
+                playsInline
+              >
+                <source src="/media/videos/airpower_station_loop.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+            </div>
+
+            {/* Floating stats card */}
+            <Card className="absolute -bottom-6 -right-6 p-6 bg-card/95 backdrop-blur-sm border-border">
+              <div className="grid grid-cols-2 gap-4 text-center">
+                <div>
+                  <div className="text-lg font-bold text-foreground">3 min</div>
+                  <div className="text-xs text-muted-foreground">Fill Time</div>
+                </div>
+                <div>
+                  <div className="text-lg font-bold text-foreground">16 hrs</div>
+                  <div className="text-xs text-muted-foreground">Runtime</div>
+                </div>
+              </div>
+            </Card>
+          </div>
+
+          {/* Content Section */}
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-2xl font-bold text-foreground mb-4">
+                Zero-emission, closed-loop energy solution
+              </h3>
+              <p className="text-lg leading-relaxed text-muted-foreground">
+                The AirPower Station is a zero-emission, closed-loop energy solution — built into a 40-foot container and ready to deploy anywhere. It includes our proprietary compressed air engine (CAE), integrated generator, air tanks, and optional BESS (Battery Energy Storage System).
+              </p>
+              <p className="text-lg leading-relaxed text-muted-foreground mt-4">
+                Designed to run continuously with cold air as its only exhaust, the AirPower Station delivers scalable, on-demand power wherever it's needed — without fuel, without emissions, and without compromise. With just a 3-minute air tank fill, it provides up to 16 hours of continuous power generation.
+              </p>
+            </div>
+
+            {/* Key Benefits */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="flex items-center space-x-3">
+                <div className="h-2 w-2 bg-green-400 rounded-full" />
+                <span className="text-sm font-medium text-foreground">Fully Integrated Platform</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="h-2 w-2 bg-blue-400 rounded-full" />
+                <span className="text-sm font-medium text-foreground">Rapid Deployment</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="h-2 w-2 bg-cyan-400 rounded-full" />
+                <span className="text-sm font-medium text-foreground">Scalable Power Output</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="h-2 w-2 bg-yellow-400 rounded-full" />
+                <span className="text-sm font-medium text-foreground">Cold Air Byproduct</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Features Grid */}
+        <div className="border-t border-border pt-16">
+          <h3 className="text-2xl font-bold text-center text-foreground mb-12">
+            Technical Specifications & Features
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => {
+              const Icon = feature.icon;
+              return (
+                <Card key={index} className="p-6 text-center hover:shadow-lg transition-shadow border-border bg-card/50">
+                  <div className="flex justify-center mb-4">
+                    <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <Icon className="h-6 w-6 text-primary" />
+                    </div>
+                  </div>
+                  <h4 className="font-semibold text-foreground mb-2 text-sm leading-tight">
+                    {feature.title}
+                  </h4>
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    {feature.description}
+                  </p>
+                </Card>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+} 

@@ -1,36 +1,123 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AirPower USA - Revolutionary Clean Energy Website
 
-## Getting Started
+A modern, responsive website built with Next.js, Tailwind CSS, and ShadCN UI to showcase AirPower USA's revolutionary compressed air engine technology.
 
-First, run the development server:
+## 🚀 Technology Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Framework**: Next.js 15 (App Router)
+- **Styling**: Tailwind CSS v4 with dark theme
+- **UI Components**: ShadCN UI with Slate color palette
+- **Fonts**: Inter (primary), Roboto Mono (monospace)
+- **Icons**: Lucide React
+- **Animations**: Framer Motion (ready for implementation)
+
+## 🎨 Design Philosophy
+
+- **Dark Mode First**: Professional, tech-focused aesthetic
+- **High Contrast**: Clean, readable typography
+- **Modern Grid Layouts**: Responsive design for all devices
+- **Media-Heavy**: Optimized for MP4 backgrounds, GIFs, and high-res images
+- **Tesla-Inspired**: Competing with top tech brand standards
+
+## 📁 Project Structure
+
+```
+src/
+├── app/
+│   ├── layout.tsx          # Root layout with dark theme
+│   ├── page.tsx            # Main homepage
+│   └── globals.css         # Global styles and theme
+├── components/
+│   ├── layout/
+│   │   ├── Header.tsx      # Modern navigation header
+│   │   └── Footer.tsx      # Company info footer
+│   ├── sections/           # Modular page sections
+│   │   ├── Hero.tsx        # Landing hero section
+│   │   ├── Technology.tsx  # How it works (placeholder)
+│   │   ├── Products.tsx    # Product lineup (placeholder)
+│   │   └── UseCases.tsx    # Applications (placeholder)
+│   └── ui/                 # ShadCN components
+public/
+└── media/                  # Media assets directory
+    ├── videos/             # MP4 background videos
+    ├── images/             # High-resolution images
+    └── gifs/               # Animated GIFs
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Current Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### ✅ Complete Foundation
+- [x] Next.js 15 with App Router
+- [x] Tailwind CSS v4 configuration
+- [x] ShadCN UI components (Button, Card, Badge, Separator)
+- [x] Dark theme implementation
+- [x] Responsive navigation header
+- [x] Hero section with gradient backgrounds
+- [x] Modular section components
+- [x] Professional footer
+- [x] Media directory structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### ✅ Hero Section
+- [x] Compelling headline with gradient text
+- [x] Key technology benefits
+- [x] Call-to-action buttons
+- [x] Performance statistics
+- [x] Animated scroll indicator
 
-## Learn More
+### ✅ Navigation
+- [x] Fixed header with backdrop blur
+- [x] Mobile-responsive menu
+- [x] Smooth scroll navigation
+- [x] Professional branding
 
-To learn more about Next.js, take a look at the following resources:
+## 🎯 Ready for Section Development
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The foundation is complete and ready for sequential section building:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Technology Section** - How compressed air engines work
+2. **Products Section** - 50kW mobile units and 1.5MW stations
+3. **Use Cases Section** - Data centers, crypto, grow ops applications
+4. **About Section** - Company story and team
+5. **Contact/Investor Section** - Lead capture and investor relations
 
-## Deploy on Vercel
+## 🚀 Getting Started
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+# Install dependencies
+npm install
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+```
+
+Visit [http://localhost:3000](http://localhost:3000) to see the website.
+
+## 📝 Next Steps
+
+1. **Content Development**: Add detailed content to placeholder sections
+2. **Media Integration**: Add MP4 backgrounds, product images, and GIFs
+3. **Animations**: Implement Framer Motion for scroll animations
+4. **Forms**: Add contact and investor lead capture forms
+5. **Performance**: Optimize images and implement lazy loading
+
+## 🎨 Color Palette
+
+The website uses a professional dark theme with the Slate color palette:
+- Primary: Modern slate blue
+- Background: Deep dark
+- Text: High contrast white/gray
+- Accents: Blue, green, yellow for features
+
+## 📱 Responsive Design
+
+- Mobile-first approach
+- Breakpoints: sm, md, lg, xl
+- Touch-friendly navigation
+- Optimized typography scaling
+
+---
+
+**AirPower USA** - Powering the future with compressed air technology.
