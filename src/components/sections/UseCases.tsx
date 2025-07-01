@@ -124,7 +124,7 @@ export default function UseCases() {
             </span>
           </h2>
           <p className="mt-6 text-xl leading-8 text-muted-foreground">
-            From farms to AI labs — clean power, anywhere it's needed.
+            From farms to AI labs — clean power, anywhere it&apos;s needed.
           </p>
           
           {/* Intro Copy */}
@@ -132,7 +132,7 @@ export default function UseCases() {
             <p className="text-lg leading-relaxed text-muted-foreground">
               AirPower delivers high-capacity, zero-emission energy across industries. Whether powering 
               infrastructure, operations, or innovation, the AirPower Station makes clean energy accessible 
-              in places traditional power can't reach.
+              in places traditional power can&apos;t reach.
             </p>
           </div>
         </div>

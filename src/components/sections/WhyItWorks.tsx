@@ -8,8 +8,7 @@ import {
   Wind,
   Truck,
   Zap,
-  Shield,
-  CheckCircle
+  Shield
 } from "lucide-react";
 
 const benefits = [

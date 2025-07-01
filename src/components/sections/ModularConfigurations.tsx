@@ -124,13 +124,13 @@ export default function ModularConfigurations() {
           {/* Intro Copy */}
           <div className="mt-8 p-6 rounded-xl bg-background/50 border border-border">
             <p className="text-lg leading-relaxed text-muted-foreground">
-              The AirPower Station isn't just one product — it's a flexible energy platform that adapts to your mission. 
+              The AirPower Station isn&apos;t just one product — it&apos;s a flexible energy platform that adapts to your mission. 
               Whether truck-mounted, containerized, or trailer-based, each unit delivers our full CAE + generator system, 
               with optional BESS for battery storage.
             </p>
             <p className="text-lg leading-relaxed text-muted-foreground mt-4">
               From mobile operations to permanent grid support, AirPower's modular design means clean, scalable power — 
-              wherever it's needed most.
+              wherever it&apos;s needed most.
             </p>
           </div>
         </div>

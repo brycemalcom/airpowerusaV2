@@ -122,7 +122,7 @@ export default function Technology() {
           {/* Intro Copy */}
           <div className="mt-8 p-6 rounded-xl bg-background/50 border border-border">
             <p className="text-lg leading-relaxed text-muted-foreground">
-              AirPower's patented system transforms ambient air into clean, on-demand power using a closed-loop cycle. 
+              AirPower&apos;s patented system transforms ambient air into clean, on-demand power using a closed-loop cycle. 
               With no fuel, no combustion, and only cold air as its byproduct, the AirPower Station redefines how energy 
               is generated, stored, and delivered — all within a portable, 40-foot container.
             </p>

@@ -90,7 +90,7 @@ export default function MarketOpportunity() {
               all with one modular, deployable system.
             </p>
             <p className="text-lg leading-relaxed text-muted-foreground mt-4 font-semibold">
-              We're not just solving one problem. We're unlocking a whole new category.
+              We&apos;re not just solving one problem. We&apos;re unlocking a whole new category.
             </p>
           </div>
         </div>
