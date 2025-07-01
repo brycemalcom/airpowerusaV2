@@ -69,7 +69,7 @@ export default function WhyItWorks() {
           <div className="mt-8 p-6 rounded-xl bg-card/50 border border-border">
             <p className="text-lg leading-relaxed text-muted-foreground">
               The AirPower Station was engineered for the harshest environments and the most demanding missions. 
-              Unlike solar or diesel systems, it delivers instant, on-demand energy that's reliable, portable, and safe.
+              Unlike solar or diesel systems, it delivers instant, on-demand energy that&apos;s reliable, portable, and safe.
             </p>
             <p className="text-lg leading-relaxed text-muted-foreground mt-4">
               With zero emissions, silent operation, and cold air as its only exhaust — this platform outperforms 

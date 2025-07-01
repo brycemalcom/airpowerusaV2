@@ -123,7 +123,7 @@ export default function ProductIntro() {
                 The AirPower Station is a zero-emission, closed-loop energy solution — built into a 40-foot container and ready to deploy anywhere. It includes our proprietary compressed air engine (CAE), integrated generator, air tanks, and optional BESS (Battery Energy Storage System).
               </p>
               <p className="text-lg leading-relaxed text-muted-foreground mt-4">
-                Designed to run continuously with cold air as its only exhaust, the AirPower Station delivers scalable, on-demand power wherever it's needed — without fuel, without emissions, and without compromise. With just a 3-minute air tank fill, it provides up to 16 hours of continuous power generation.
+                Designed to run continuously with cold air as its only exhaust, the AirPower Station delivers scalable, on-demand power wherever it&apos;s needed — without fuel, without emissions, and without compromise. With just a 3-minute air tank fill, it provides up to 16 hours of continuous power generation.
               </p>
             </div>
 

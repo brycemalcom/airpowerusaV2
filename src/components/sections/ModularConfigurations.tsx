@@ -129,7 +129,7 @@ export default function ModularConfigurations() {
               with optional BESS for battery storage.
             </p>
             <p className="text-lg leading-relaxed text-muted-foreground mt-4">
-              From mobile operations to permanent grid support, AirPower's modular design means clean, scalable power — 
+              From mobile operations to permanent grid support, AirPower&apos;s modular design means clean, scalable power — 
               wherever it&apos;s needed most.
             </p>
           </div>
