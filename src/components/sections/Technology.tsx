@@ -235,24 +235,24 @@ export default function Technology() {
               The AirPower Station in Action
             </h3>
             <p className="text-lg text-muted-foreground mb-8">
-              Watch the complete 90-second demonstration showing real footage of our revolutionary technology.
+              Get ready for an exclusive behind-the-scenes look at our revolutionary technology in operation.
             </p>
             
             {/* Video Player */}
             <Card className="overflow-hidden mb-8">
               <div className="aspect-video relative bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center">
                 <div className="text-center">
-                  <div className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center mb-4 mx-auto hover:bg-white/20 transition-colors cursor-pointer">
-                    <Play className="h-8 w-8 text-white ml-1" />
+                  <div className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center mb-4 mx-auto">
+                    <Play className="h-8 w-8 text-white/60 ml-1" />
                   </div>
                   <h4 className="text-xl font-semibold text-white mb-2">
                     The AirPower Station in Action
                   </h4>
-                  <p className="text-white/80">
-                    90-second explainer video with real footage
+                  <p className="text-white/80 mb-3">
+                    Comprehensive explainer video with real footage
                   </p>
-                  <Badge variant="outline" className="mt-4 border-white/30 text-white">
-                    Click to Play
+                  <Badge variant="outline" className="border-white/30 text-white/90 bg-white/5">
+                    Video Footage Coming Soon
                   </Badge>
                 </div>
                 

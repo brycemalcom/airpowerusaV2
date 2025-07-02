@@ -19,8 +19,6 @@ const marketStats = [
     label: "Global Generator Market",
     description: "Off-grid and backup power demand growing faster than ever.",
     icon: Zap,
-    color: "from-orange-500 to-red-500",
-    bgColor: "bg-orange-500/10",
     growth: "12% CAGR"
   },
   {
@@ -28,8 +26,6 @@ const marketStats = [
     label: "EV/BESS Infrastructure",
     description: "Clean storage and mobile charging stations are mission-critical.",
     icon: Battery,
-    color: "from-blue-500 to-cyan-500",
-    bgColor: "bg-blue-500/10",
     growth: "25% CAGR"
   },
   {
@@ -37,8 +33,6 @@ const marketStats = [
     label: "CAGR in Grid-Scale Battery Storage",
     description: "Demand for renewable-ready storage solutions is surging.",
     icon: BarChart3,
-    color: "from-green-500 to-emerald-500",
-    bgColor: "bg-green-500/10",
     growth: "42% CAGR"
   },
   {
@@ -46,8 +40,6 @@ const marketStats = [
     label: "of the World Lacks Reliable Grid Access",
     description: "Our solution is engineered for where the grid can't reach.",
     icon: Globe,
-    color: "from-purple-500 to-pink-500",
-    bgColor: "bg-purple-500/10",
     growth: "2.8B People"
   }
 ];
@@ -113,22 +105,22 @@ export default function MarketOpportunity() {
                 className="group relative overflow-hidden p-8 hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] border-border bg-background/50 backdrop-blur-sm"
               >
                 {/* Gradient background */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${stat.color} opacity-5 group-hover:opacity-10 transition-opacity duration-500`} />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 
                 {/* Content */}
                 <div className="relative z-10">
                   <div className="flex items-center justify-between mb-6">
-                    <div className={`flex items-center justify-center w-16 h-16 rounded-2xl ${stat.bgColor} group-hover:scale-110 transition-transform duration-300`}>
-                      <Icon className="w-8 h-8 text-primary" />
+                    <div className="flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 group-hover:scale-110 group-hover:from-primary/20 group-hover:to-primary/10 transition-all duration-300">
+                      <Icon className="w-8 h-8 text-primary group-hover:text-primary/90" />
                     </div>
-                    <Badge variant="outline" className="text-xs font-medium">
+                    <Badge variant="outline" className="text-xs font-medium border-primary/30 text-primary">
                       {stat.growth}
                     </Badge>
                   </div>
                   
                   <div className="space-y-4">
                     <div>
-                      <div className={`text-4xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}>
+                      <div className="text-4xl font-bold text-primary group-hover:text-primary/90 transition-colors duration-300 mb-2">
                         {stat.value}
                       </div>
                       <h3 className="text-xl font-bold text-foreground leading-tight">
@@ -188,7 +180,7 @@ export default function MarketOpportunity() {
               <h3 className="text-2xl font-bold text-foreground mb-4">
                 Total Addressable Market
               </h3>
-              <div className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400 mb-4">
+              <div className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-300 mb-4">
                 $70B+
               </div>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

@@ -9,85 +9,43 @@ import {
   Truck,
   Zap,
   Shield,
-  CheckCircle,
-  Mountain,
-  Building,
-  Trees,
-  Waves,
-  Flag
+  CheckCircle
 } from "lucide-react";
 
 const benefits = [
   {
     icon: MapPin,
     title: "Works in remote or off-grid locations",
-    description: "No grid tie-in or fuel source required",
-    color: "text-green-500"
+    description: "No grid tie-in or fuel source required"
   },
   {
     icon: Thermometer,
     title: "Operates in extreme heat or cold",
-    description: "Cold-air exhaust doubles as climate advantage",
-    color: "text-blue-500"
+    description: "Cold-air exhaust doubles as climate advantage"
   },
   {
     icon: Wind,
     title: "Zero-emission + low acoustic signature",
-    description: "No fumes, no noise, no heat pollution",
-    color: "text-emerald-500"
+    description: "No fumes, no noise, no heat pollution"
   },
   {
     icon: Truck,
     title: "Easy to deploy + re-deploy",
-    description: "Truck, trailer, or container-mounted formats",
-    color: "text-orange-500"
+    description: "Truck, trailer, or container-mounted formats"
   },
   {
     icon: Zap,
     title: "Instant startup, reliable uptime",
-    description: "Compressed air engine never idles or clogs",
-    color: "text-yellow-500"
+    description: "Compressed air engine never idles or clogs"
   },
   {
     icon: Shield,
     title: "Built for rugged terrains + mission-critical ops",
-    description: "Military-grade durability with low maintenance",
-    color: "text-red-500"
+    description: "Military-grade durability with low maintenance"
   }
 ];
 
-const environments = [
-  {
-    icon: Flag,
-    name: "Military Base",
-    description: "Mission-critical operations",
-    visual: "Military deployment scenario"
-  },
-  {
-    icon: Mountain,
-    name: "Mountain Village",
-    description: "High-altitude remote power",
-    visual: "Alpine community setting"
-  },
-  {
-    icon: Trees,
-    name: "Forest Site",
-    description: "Environmental monitoring",
-    visual: "Remote forest installation"
-  },
-  {
-    icon: Building,
-    name: "Data Center",
-    description: "Critical infrastructure backup",
-    visual: "Urban data facility"
-  },
-  {
-    icon: Waves,
-    name: "Coastal Facility",
-    description: "Marine environment resilience",
-    visual: "Coastal industrial site"
-  }
-];
+
 
 export default function WhyItWorks() {
   return (
@@ -135,12 +93,12 @@ export default function WhyItWorks() {
                   className="group p-6 text-center hover:shadow-lg transition-all duration-300 hover:scale-[1.02] border-border bg-card/50 backdrop-blur-sm"
                 >
                   <div className="flex justify-center mb-4">
-                    <div className="h-16 w-16 rounded-2xl bg-background flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <Icon className={`h-8 w-8 ${benefit.color}`} />
+                    <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 flex items-center justify-center group-hover:scale-110 group-hover:from-primary/20 group-hover:to-primary/10 transition-all duration-300">
+                      <Icon className="h-8 w-8 text-primary group-hover:text-primary/90" />
                     </div>
                   </div>
                   <div className="flex items-center justify-center mb-3">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
+                    <div className="h-2 w-2 rounded-full bg-gradient-to-r from-primary to-cyan-400 mr-3" />
                     <h4 className="font-bold text-foreground leading-tight">
                       {benefit.title}
                     </h4>
@@ -154,90 +112,7 @@ export default function WhyItWorks() {
           </div>
         </div>
 
-        {/* Environments Section */}
-        <div className="border-t border-border pt-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Content */}
-            <div className="space-y-8">
-              <div>
-                <Badge variant="outline" className="mb-4">
-                  Proven in the Field
-                </Badge>
-                <h3 className="text-3xl font-bold text-foreground mb-6">
-                  Same Power, Anywhere
-                </h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  From scorching deserts to freezing mountains, from remote villages to critical infrastructure — 
-                  the AirPower Station delivers consistent, reliable energy where traditional systems fail.
-                </p>
-              </div>
 
-              {/* Environment List */}
-              <div className="space-y-4">
-                {environments.map((env, index) => {
-                  const Icon = env.icon;
-                  return (
-                    <div key={index} className="flex items-center space-x-4 p-3 rounded-lg bg-card/30 border border-border/50">
-                      <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10">
-                        <Icon className="w-5 h-5 text-primary" />
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="font-semibold text-foreground">
-                          {env.name}
-                        </h4>
-                        <p className="text-sm text-muted-foreground">
-                          {env.description}
-                        </p>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* Visual Grid */}
-            <div className="relative">
-              <div className="grid grid-cols-2 gap-4">
-                {environments.map((env, index) => {
-                  const Icon = env.icon;
-                  return (
-                    <Card 
-                      key={index} 
-                      className={`overflow-hidden ${index === 4 ? 'col-span-2' : ''}`}
-                    >
-                      <div className={`aspect-square relative bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center ${index === 4 ? 'aspect-[2/1]' : ''}`}>
-                        <div className="text-center">
-                          <Icon className="h-12 w-12 text-muted-foreground mx-auto mb-3" />
-                          <h4 className="font-semibold text-foreground text-sm mb-1">
-                            {env.name}
-                          </h4>
-                          <p className="text-xs text-muted-foreground px-2">
-                            {env.visual}
-                          </p>
-                        </div>
-                        
-                        {/* Environment overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                        
-                        {/* Environment indicator */}
-                        <div className="absolute top-2 right-2 w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center">
-                          <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                        </div>
-                      </div>
-                    </Card>
-                  );
-                })}
-              </div>
-              
-              {/* Center badge */}
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <Badge className="bg-primary/90 text-primary-foreground px-6 py-2 text-sm font-bold">
-                  All Environments
-                </Badge>
-              </div>
-            </div>
-          </div>
-        </div>
 
         {/* Bottom Stats */}
         <div className="mt-20 border-t border-border pt-16">

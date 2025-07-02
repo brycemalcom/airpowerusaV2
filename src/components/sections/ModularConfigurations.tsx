@@ -3,10 +3,10 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import { 
   Truck,
   Container,
-  Move,
   Battery,
   Car,
   Zap,
@@ -30,7 +30,11 @@ const configurations = [
       { label: "Applications", value: "Emergency, Military, Remote" }
     ],
     features: ["Rapid deployment", "Vehicle-integrated", "Military-grade", "Off-grid ready"],
-    visual: "Truck with visible mounted engine",
+    visual: {
+      type: "image",
+      src: "/media/images/airstation_truck.png",
+      alt: "Truck-mounted AirPower Station for mobile deployment"
+    },
     categoryColor: "bg-red-500"
   },
   {
@@ -47,28 +51,15 @@ const configurations = [
       { label: "Runtime", value: "16+ hours continuous" }
     ],
     features: ["Industrial scale", "BESS integration", "Containerized", "Grid-level power"],
-    visual: "Container + battery racks visible",
+    visual: {
+      type: "video",
+      src: "/media/videos/airpower_station_loop.mp4",
+      alt: "Containerized AirPower Station in operation"
+    },
     categoryColor: "bg-blue-500"
   },
   {
     id: 3,
-    title: "Trailer Unit / Mobile Hub",
-    subtitle: "Scalable tow-behind solution",
-    description: "Suited for rural energy access or event/grid support. Flexible format, drop-and-deploy.",
-    icon: Move,
-    category: "Portable",
-    specifications: [
-      { label: "Deployment", value: "Drop-and-deploy" },
-      { label: "Power Range", value: "50kW - 500kW" },
-      { label: "Mobility", value: "Standard trailer hitch" },
-      { label: "Setup Time", value: "< 30 minutes" }
-    ],
-    features: ["Tow-behind design", "Event support", "Rural access", "Flexible scaling"],
-    visual: "Trailer configuration",
-    categoryColor: "bg-green-500"
-  },
-  {
-    id: 4,
     title: "BESS-Only Module",
     subtitle: "1.5MW battery storage unit",
     description: "Rechargeable from generator or grid. Enables silent, stored energy on demand.",
@@ -81,11 +72,15 @@ const configurations = [
       { label: "Cycle Life", value: "10,000+ cycles" }
     ],
     features: ["Silent operation", "Grid charging", "Long cycle life", "Modular design"],
-    visual: "Separate BESS unit visual",
+    visual: {
+      type: "image",
+      src: "/media/images/BESS storage.jpg",
+      alt: "Commercial BESS battery storage system"
+    },
     categoryColor: "bg-purple-500"
   },
   {
-    id: 5,
+    id: 4,
     title: "Demo Van / CAE Prototype",
     subtitle: "Functional vehicle running CAE",
     description: "Proof of concept for future air-powered mobility. Included as reference visual, not for sale.",
@@ -98,7 +93,11 @@ const configurations = [
       { label: "Future", value: "Air-powered mobility" }
     ],
     features: ["Proof of concept", "CAE-powered", "Future mobility", "Technology demo"],
-    visual: "Van GIF or static still",
+    visual: {
+      type: "video",
+      src: "/media/videos/proto_truck.mp4",
+      alt: "Prototype CAE-powered vehicle demonstration"
+    },
     categoryColor: "bg-cyan-500"
   }
 ];
@@ -147,16 +146,36 @@ export default function ModularConfigurations() {
               >
                 {/* Header */}
                 <div className="relative">
-                  {/* Visual placeholder */}
+                  {/* Visual rendering */}
                   <div className="aspect-[16/10] relative overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-center">
-                        <Icon className="h-20 w-20 text-muted-foreground mx-auto mb-4" />
-                        <p className="text-sm text-muted-foreground px-4">
-                          {config.visual}
-                        </p>
+                    {typeof config.visual === 'object' && config.visual.type === 'image' ? (
+                      <Image
+                        src={config.visual.src}
+                        alt={config.visual.alt}
+                        fill
+                        className={config.title === "BESS-Only Module" ? "object-contain p-8" : "object-cover"}
+                      />
+                    ) : typeof config.visual === 'object' && config.visual.type === 'video' ? (
+                      <video
+                        className="absolute inset-0 w-full h-full object-cover"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                      >
+                        <source src={config.visual.src} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    ) : (
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="text-center">
+                          <Icon className="h-20 w-20 text-muted-foreground mx-auto mb-4" />
+                          <p className="text-sm text-muted-foreground px-4">
+                            {typeof config.visual === 'string' ? config.visual : 'Coming Soon'}
+                          </p>
+                        </div>
                       </div>
-                    </div>
+                    )}
                     
                     {/* Category badge */}
                     <div className="absolute top-4 left-4">

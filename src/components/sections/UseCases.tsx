@@ -2,13 +2,12 @@
 
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import Image from "next/image";
 import { 
   Leaf,
   Server,
   Heart,
   Home,
-  Brain,
-  Bitcoin,
   Ship,
   HardHat,
   Car
@@ -22,17 +21,25 @@ const applications = [
     description: "Continuous power and cold air output ideal for high-efficiency grow operations and environmental control.",
     icon: Leaf,
     category: "Agriculture",
-    visual: "Greenhouse with cold exhaust overlay",
+    visual: {
+      type: "image",
+      src: "/media/images/grow-op.png",
+      alt: "Indoor grow facility with AirPower Station providing climate control"
+    },
     categoryColor: "bg-green-500"
   },
   {
     id: 2,
     title: "Data Centers",
-    subtitle: "Always-on infrastructure",
-    description: "Delivers resilient off-grid power with integrated cooling to support energy-intensive workloads.",
+    subtitle: "Always-on infrastructure for AI, crypto, and cloud computing",
+    description: "Delivers resilient off-grid power with integrated cooling to support energy-intensive workloads including AI labs, crypto mining operations, and high-performance computing clusters.",
     icon: Server,
     category: "Technology",
-    visual: "Cold exhaust + data center render",
+    visual: {
+      type: "image",
+      src: "/media/images/data_center.png",
+      alt: "Data center facility powered by AirPower Station technology"
+    },
     categoryColor: "bg-blue-500"
   },
   {
@@ -42,7 +49,11 @@ const applications = [
     description: "Power up emergency operations with off-grid, mobile-ready energy that can be deployed by truck or dropped on-site.",
     icon: Heart,
     category: "Emergency",
-    visual: "Truck deployment + cinematic overlay",
+    visual: {
+      type: "image",
+      src: "/media/images/disaster-relief.png",
+      alt: "Emergency response operation powered by mobile AirPower Station"
+    },
     categoryColor: "bg-red-500"
   },
   {
@@ -52,31 +63,15 @@ const applications = [
     description: "Ideal for tribal lands, island nations, and rural sites where clean, independent energy matters most.",
     icon: Home,
     category: "Community",
-    visual: "Island or rural community",
+    visual: {
+      type: "image",
+      src: "/media/images/off-grid.png",
+      alt: "Remote off-grid community powered by AirPower Station"
+    },
     categoryColor: "bg-purple-500"
   },
   {
     id: 5,
-    title: "AI Labs & High-Performance Computing",
-    subtitle: "Cooling + capacity for next-gen AI workloads",
-    description: "Cools as it powers — an ideal platform for GPU-based infrastructure.",
-    icon: Brain,
-    category: "Technology",
-    visual: "AI lab with GPU rack + cold air",
-    categoryColor: "bg-blue-500"
-  },
-  {
-    id: 6,
-    title: "Crypto Mining",
-    subtitle: "Self-contained mining operations",
-    description: "Enables mobile or static mining stations with optimized power and integrated exhaust cooling.",
-    icon: Bitcoin,
-    category: "Technology",
-    visual: "Crypto rig + rack server container",
-    categoryColor: "bg-blue-500"
-  },
-  {
-    id: 7,
     title: "Marine Applications",
     subtitle: "Power on water",
     description: "Compressed air engine proves real-world marine viability — scalable for outboard or vessel propulsion.",
@@ -86,7 +81,7 @@ const applications = [
     categoryColor: "bg-cyan-500"
   },
   {
-    id: 8,
+    id: 6,
     title: "Off-Grid Construction",
     subtitle: "Jobsite-ready, plug-and-play energy",
     description: "Portable, rugged, and always-on. Perfect for microgrids, utility installations, or energy-as-a-service models.",
@@ -96,13 +91,17 @@ const applications = [
     categoryColor: "bg-orange-500"
   },
   {
-    id: 9,
+    id: 7,
     title: "EV Infrastructure",
     subtitle: "Future-forward charging solutions",
     description: "Deployable systems to power EV charging hubs — without waiting for grid expansion.",
     icon: Car,
     category: "Transportation",
-    visual: "EV charging station + AirPower unit",
+    visual: {
+      type: "image",
+      src: "/media/images/ev-charging.png",
+      alt: "EV charging station powered by AirPower Station technology"
+    },
     categoryColor: "bg-emerald-500"
   }
 ];
@@ -161,15 +160,24 @@ export default function UseCases() {
               >
                 {/* Visual Header */}
                 <div className="aspect-[4/3] relative overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900">
-                  {/* Visual placeholder */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-center">
-                      <Icon className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
-                      <p className="text-sm text-muted-foreground px-4">
-                        {app.visual}
-                      </p>
+                  {/* Conditional rendering for image vs placeholder */}
+                  {typeof app.visual === 'object' && app.visual.type === 'image' ? (
+                    <Image
+                      src={app.visual.src}
+                      alt={app.visual.alt}
+                      fill
+                      className="object-cover"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="text-center">
+                        <Icon className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
+                        <p className="text-sm text-muted-foreground px-4">
+                          {typeof app.visual === 'string' ? app.visual : 'Coming Soon'}
+                        </p>
+                      </div>
                     </div>
-                  </div>
+                  )}
                   
                   {/* Category badge */}
                   <div className="absolute top-4 left-4">
