@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Linkedin, Twitter } from "lucide-react";
+import { Menu, Linkedin, Twitter } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const navigation = [
   { name: "Technology", href: "/#products" },
@@ -39,7 +40,7 @@ export default function Header() {
         isScrolled ? 'px-4 sm:px-6 py-2 sm:py-3' : 'px-4 sm:px-6 py-4 sm:py-6'
       }`} aria-label="Global">
         <div className="flex lg:flex-1">
-          <a href="/" className="-m-1.5 p-1.5 flex items-center space-x-2">
+          <Link href="/" className="-m-1.5 p-1.5 flex items-center space-x-2">
             <Image
               src="/media/images/airpowerlogo2.png"
               alt="AirPower USA Logo"
@@ -52,7 +53,7 @@ export default function Header() {
               priority
               loading="eager"
             />
-          </a>
+          </Link>
         </div>
         <div className="flex lg:hidden">
           <Button

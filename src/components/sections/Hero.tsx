@@ -44,15 +44,7 @@ export default function Hero() {
     }
   }, [isMobile]);
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  };
+
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">

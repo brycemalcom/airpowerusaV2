@@ -236,8 +236,8 @@ export default function UseCases() {
                                     {/* Conditional rendering for image vs placeholder */}
                   {typeof app.visual === 'object' && app.visual.type === 'image' ? (
                     <img
-                      src={(app.visual as any).src}
-                      alt={(app.visual as any).alt}
+                      src={(app.visual as { type: string; src: string; alt: string }).src}
+                      alt={(app.visual as { type: string; src: string; alt: string }).alt}
                       style={{
                         width: '100%',
                         height: '100%',
