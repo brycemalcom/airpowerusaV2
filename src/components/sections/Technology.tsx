@@ -3,16 +3,14 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import { useEffect, useState } from "react";
 import { 
   Wind,
   Zap,
   Battery,
   Thermometer,
   Database,
-  Truck,
-  Play,
-  ArrowRight
+  Truck
 } from "lucide-react";
 
 const steps = [
@@ -91,15 +89,18 @@ const steps = [
 ];
 
 export default function Technology() {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  };
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+
 
   return (
     <section id="technology" className="py-24 bg-card">
@@ -109,19 +110,19 @@ export default function Technology() {
           <Badge variant="secondary" className="mb-4">
             Patented Technology
           </Badge>
-          <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-6xl">
             How the
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
               AirPower Station Works
             </span>
           </h2>
-          <p className="mt-6 text-xl leading-8 text-muted-foreground">
+          <p className="mt-6 text-lg sm:text-xl leading-8 text-muted-foreground">
             From compressed air to clean, continuous energy.
           </p>
           
           {/* Intro Copy */}
           <div className="mt-8 p-6 rounded-xl bg-background/50 border border-border">
-            <p className="text-lg leading-relaxed text-muted-foreground">
+            <p className="text-base sm:text-lg leading-relaxed text-muted-foreground">
               AirPower&apos;s patented system transforms ambient air into clean, on-demand power using a closed-loop cycle. 
               With no fuel, no combustion, and only cold air as its byproduct, the AirPower Station redefines how energy 
               is generated, stored, and delivered — all within a portable, 40-foot container.
@@ -136,25 +137,25 @@ export default function Technology() {
             const isEven = index % 2 === 0;
             
             return (
-              <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
+              <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center ${
                 isEven ? '' : 'lg:grid-flow-dense'
               }`}>
                 {/* Content */}
                 <div className={`space-y-6 ${isEven ? '' : 'lg:col-start-2'}`}>
                   <div className="flex items-center space-x-4">
-                    <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 border-2 border-primary/20">
-                      <span className="text-lg font-bold text-primary">{step.number}</span>
+                    <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 border-2 border-primary/20">
+                      <span className="text-base sm:text-lg font-bold text-primary">{step.number}</span>
                     </div>
-                    <div className="flex items-center justify-center w-12 h-12 rounded-full bg-secondary">
-                      <Icon className="w-6 h-6 text-foreground" />
+                    <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-secondary">
+                      <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-foreground" />
                     </div>
                   </div>
                   
                   <div>
-                    <h3 className="text-2xl font-bold text-foreground mb-4">
+                    <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4">
                       {step.title}
                     </h3>
-                    <p className="text-lg leading-relaxed text-muted-foreground">
+                    <p className="text-base sm:text-lg leading-relaxed text-muted-foreground">
                       {step.description}
                     </p>
                   </div>
@@ -173,27 +174,48 @@ export default function Technology() {
                       {/* Conditional rendering based on visual type */}
                       {step.visual.type === "image" && step.visual.src ? (
                         <>
-                          <Image
+                          <img
                             src={step.visual.src}
                             alt={step.visual.description}
-                            fill
-                            className="object-contain"
+                            style={{
+                              width: '100%',
+                              height: '100%',
+                              objectFit: 'contain',
+                              display: 'block'
+                            }}
                           />
-                          {/* Gradient overlay for image */}
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+                          {/* Subtle gradient overlay for better text contrast if needed */}
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
                         </>
                       ) : step.visual.type === "video" && step.visual.src ? (
                         <>
-                          <video
-                            className="absolute inset-0 w-full h-full object-cover"
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                          >
-                            <source src={step.visual.src} type="video/mp4" />
-                            Your browser does not support the video tag.
-                          </video>
+                          {/* Video for desktop */}
+                          {!isMobile ? (
+                            <video
+                              className="absolute inset-0 w-full h-full object-cover"
+                              autoPlay
+                              loop
+                              muted
+                              playsInline
+                            >
+                              <source src={step.visual.src} type="video/mp4" />
+                              Your browser does not support the video tag.
+                            </video>
+                          ) : (
+                            /* Mobile fallback */
+                            <div className="text-center p-8">
+                              <Icon className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
+                              <h4 className="font-semibold text-foreground mb-2">
+                                {step.visual.placeholder}
+                              </h4>
+                              <p className="text-sm text-muted-foreground">
+                                {step.visual.description}
+                              </p>
+                              <Badge variant="outline" className="mt-4">
+                                VIDEO
+                              </Badge>
+                            </div>
+                          )}
                           {/* Gradient overlay for video */}
                           <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                         </>
@@ -225,53 +247,7 @@ export default function Technology() {
           })}
         </div>
 
-        {/* Embedded Video Section */}
-        <div className="border-t border-border pt-20">
-          <div className="mx-auto max-w-4xl text-center">
-            <Badge variant="secondary" className="mb-4">
-              See It In Action
-            </Badge>
-            <h3 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-6">
-              The AirPower Station in Action
-            </h3>
-            <p className="text-lg text-muted-foreground mb-8">
-              Get ready for an exclusive behind-the-scenes look at our revolutionary technology in operation.
-            </p>
-            
-            {/* Video Player */}
-            <Card className="overflow-hidden mb-8">
-              <div className="aspect-video relative bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center mb-4 mx-auto">
-                    <Play className="h-8 w-8 text-white/60 ml-1" />
-                  </div>
-                  <h4 className="text-xl font-semibold text-white mb-2">
-                    The AirPower Station in Action
-                  </h4>
-                  <p className="text-white/80 mb-3">
-                    Comprehensive explainer video with real footage
-                  </p>
-                  <Badge variant="outline" className="border-white/30 text-white/90 bg-white/5">
-                    Video Footage Coming Soon
-                  </Badge>
-                </div>
-                
-                {/* Video overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-              </div>
-            </Card>
-            
-            {/* CTA */}
-            <Button 
-              size="lg" 
-              className="group bg-primary hover:bg-primary/90"
-              onClick={() => scrollToSection('use-cases')}
-            >
-              Explore Applications
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </Button>
-          </div>
-        </div>
+
       </div>
     </section>
   );

@@ -2,7 +2,6 @@
 
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import Image from "next/image";
 import { 
   Leaf,
   Server,
@@ -10,7 +9,9 @@ import {
   Home,
   Ship,
   HardHat,
-  Car
+  Car,
+  Stethoscope,
+  Zap
 } from "lucide-react";
 
 const applications = [
@@ -26,7 +27,11 @@ const applications = [
       src: "/media/images/grow-op.png",
       alt: "Indoor grow facility with AirPower Station providing climate control"
     },
-    categoryColor: "bg-green-500"
+    categoryColor: "bg-green-500",
+    tags: [
+      { color: "bg-green-400", label: "Zero Emissions" },
+      { color: "bg-blue-400", label: "Climate Control" }
+    ]
   },
   {
     id: 2,
@@ -37,10 +42,14 @@ const applications = [
     category: "Technology",
     visual: {
       type: "image",
-      src: "/media/images/data_center.png",
-      alt: "Data center facility powered by AirPower Station technology"
+      src: "/media/images/server_room.jpeg",
+      alt: "Server room with advanced computing infrastructure powered by AirPower Station"
     },
-    categoryColor: "bg-blue-500"
+    categoryColor: "bg-blue-500",
+    tags: [
+      { color: "bg-green-400", label: "Zero Emissions" },
+      { color: "bg-blue-400", label: "Integrated Cooling" }
+    ]
   },
   {
     id: 3,
@@ -51,10 +60,14 @@ const applications = [
     category: "Emergency",
     visual: {
       type: "image",
-      src: "/media/images/disaster-relief.png",
+      src: "/media/images/disaster_relief.jpeg",
       alt: "Emergency response operation powered by mobile AirPower Station"
     },
-    categoryColor: "bg-red-500"
+    categoryColor: "bg-red-500",
+    tags: [
+      { color: "bg-orange-400", label: "Rapid Deployment" },
+      { color: "bg-purple-400", label: "Mobile-Ready" }
+    ]
   },
   {
     id: 4,
@@ -65,10 +78,14 @@ const applications = [
     category: "Community",
     visual: {
       type: "image",
-      src: "/media/images/off-grid.png",
+      src: "/media/images/remote_community.jpeg",
       alt: "Remote off-grid community powered by AirPower Station"
     },
-    categoryColor: "bg-purple-500"
+    categoryColor: "bg-purple-500",
+    tags: [
+      { color: "bg-green-400", label: "Zero Emissions" },
+      { color: "bg-cyan-400", label: "Grid Independence" }
+    ]
   },
   {
     id: 5,
@@ -77,18 +94,34 @@ const applications = [
     description: "Compressed air engine proves real-world marine viability — scalable for outboard or vessel propulsion.",
     icon: Ship,
     category: "Marine",
-    visual: "Pontoon with outboard CAE",
-    categoryColor: "bg-cyan-500"
+    visual: {
+      type: "image",
+      src: "/media/images/marine_app.jpeg",
+      alt: "Marine application with AirPower Station technology for water-based operations"
+    },
+    categoryColor: "bg-cyan-500",
+    tags: [
+      { color: "bg-purple-400", label: "Mobile-Ready" },
+      { color: "bg-blue-400", label: "Marine Proven" }
+    ]
   },
   {
     id: 6,
     title: "Off-Grid Construction",
-    subtitle: "Jobsite-ready, plug-and-play energy",
-    description: "Portable, rugged, and always-on. Perfect for microgrids, utility installations, or energy-as-a-service models.",
+    subtitle: "Jobsite power where the grid can't reach",
+    description: "Power construction equipment, tools, and temporary facilities at remote jobsites. Build infrastructure anywhere without requiring grid connection first.",
     icon: HardHat,
     category: "Industrial",
-    visual: "Container + construction site",
-    categoryColor: "bg-orange-500"
+    visual: {
+      type: "image",
+      src: "/media/images/construction_site.jpeg",
+      alt: "Construction site powered by AirPower Station"
+    },
+    categoryColor: "bg-orange-500",
+    tags: [
+      { color: "bg-orange-400", label: "Rapid Deployment" },
+      { color: "bg-yellow-400", label: "Rugged Design" }
+    ]
   },
   {
     id: 7,
@@ -102,7 +135,47 @@ const applications = [
       src: "/media/images/ev-charging.png",
       alt: "EV charging station powered by AirPower Station technology"
     },
-    categoryColor: "bg-emerald-500"
+    categoryColor: "bg-emerald-500",
+    tags: [
+      { color: "bg-green-400", label: "Zero Emissions" },
+      { color: "bg-emerald-400", label: "Future-Ready" }
+    ]
+  },
+  {
+    id: 8,
+    title: "Medical & Healthcare",
+    subtitle: "Critical power + cold storage for medical equipment",
+    description: "Emergency medical equipment backup, field hospitals, vaccine cold storage, and mobile medical units requiring both power and cooling.",
+    icon: Stethoscope,
+    category: "Healthcare",
+    visual: {
+      type: "image",
+      src: "/media/images/medical.jpeg",
+      alt: "Medical equipment and healthcare facility powered by AirPower Station"
+    },
+    categoryColor: "bg-teal-500",
+    tags: [
+      { color: "bg-red-400", label: "Critical Backup" },
+      { color: "bg-blue-400", label: "Cold Storage" }
+    ]
+  },
+  {
+    id: 9,
+    title: "Microgrid & Backup Power",
+    subtitle: "Utility-scale grid support and backup systems",
+    description: "Grid stability solutions for utilities, telecommunications infrastructure, and critical facilities requiring reliable backup power and energy storage.",
+    icon: Zap,
+    category: "Utility",
+    visual: {
+      type: "image",
+      src: "/media/images/grid.jpeg",
+      alt: "Microgrid and backup power infrastructure with AirPower Station"
+    },
+    categoryColor: "bg-indigo-500",
+    tags: [
+      { color: "bg-yellow-400", label: "Grid Stability" },
+      { color: "bg-indigo-400", label: "Utility-Scale" }
+    ]
   }
 ];
 
@@ -117,19 +190,19 @@ export default function UseCases() {
           <Badge variant="secondary" className="mb-4">
             Real-World Applications
           </Badge>
-          <h2 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-6xl">
             Powering Real-World
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
               Possibilities
             </span>
           </h2>
-          <p className="mt-6 text-xl leading-8 text-muted-foreground">
+          <p className="mt-6 text-lg sm:text-xl leading-8 text-muted-foreground">
             From farms to AI labs — clean power, anywhere it&apos;s needed.
           </p>
           
           {/* Intro Copy */}
           <div className="mt-8 p-6 rounded-xl bg-card/50 border border-border">
-            <p className="text-lg leading-relaxed text-muted-foreground">
+            <p className="text-base sm:text-lg leading-relaxed text-muted-foreground">
               AirPower delivers high-capacity, zero-emission energy across industries. Whether powering 
               infrastructure, operations, or innovation, the AirPower Station makes clean energy accessible 
               in places traditional power can&apos;t reach.
@@ -138,19 +211,19 @@ export default function UseCases() {
         </div>
 
         {/* Category Filter Pills */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
-          <Badge variant="outline" className="px-4 py-2 text-sm font-medium">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12">
+          <Badge variant="outline" className="px-3 py-2 text-xs sm:text-sm font-medium">
             All Industries
           </Badge>
           {categories.map((category) => (
-            <Badge key={category} variant="outline" className="px-4 py-2 text-sm font-medium">
+            <Badge key={category} variant="outline" className="px-3 py-2 text-xs sm:text-sm font-medium">
               {category}
             </Badge>
           ))}
         </div>
 
         {/* Applications Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {applications.map((app) => {
             const Icon = app.icon;
             return (
@@ -160,75 +233,74 @@ export default function UseCases() {
               >
                 {/* Visual Header */}
                 <div className="aspect-[4/3] relative overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900">
-                  {/* Conditional rendering for image vs placeholder */}
+                                    {/* Conditional rendering for image vs placeholder */}
                   {typeof app.visual === 'object' && app.visual.type === 'image' ? (
-                    <Image
-                      src={app.visual.src}
-                      alt={app.visual.alt}
-                      fill
-                      className="object-cover"
+                    <img
+                      src={(app.visual as any).src}
+                      alt={(app.visual as any).alt}
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        display: 'block',
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        zIndex: 1
+                      }}
                     />
                   ) : (
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="text-center">
-                        <Icon className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
-                        <p className="text-sm text-muted-foreground px-4">
+                        <Icon className="h-12 w-12 sm:h-16 sm:w-16 text-muted-foreground mx-auto mb-4" />
+                        <p className="text-xs sm:text-sm text-muted-foreground px-4">
                           {typeof app.visual === 'string' ? app.visual : 'Coming Soon'}
                         </p>
                       </div>
                     </div>
                   )}
                   
-                  {/* Category badge */}
-                  <div className="absolute top-4 left-4">
-                    <Badge 
-                      className={`${app.categoryColor} text-white border-0`}
-                    >
-                      {app.category}
-                    </Badge>
-                  </div>
+
                   
                   {/* Hover overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   
                   {/* ID number */}
-                  <div className="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-primary/20 backdrop-blur-sm flex items-center justify-center">
-                    <span className="text-sm font-bold text-primary">
+                  <div className="absolute bottom-4 right-4 w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-primary/20 backdrop-blur-sm flex items-center justify-center">
+                    <span className="text-xs sm:text-sm font-bold text-primary">
                       {app.id.toString().padStart(2, '0')}
                     </span>
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className="p-6 space-y-4">
+                <div className="p-4 sm:p-6 space-y-3 sm:space-y-4">
                   <div className="flex items-center space-x-3">
-                    <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10">
-                      <Icon className="w-5 h-5 text-primary" />
+                    <div className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-primary/10">
+                      <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="font-bold text-foreground text-lg leading-tight">
+                      <h3 className="font-bold text-foreground text-base sm:text-lg leading-tight">
                         {app.title}
                       </h3>
-                      <p className="text-sm text-primary font-medium">
+                      <p className="text-xs sm:text-sm text-primary font-medium">
                         {app.subtitle}
                       </p>
                     </div>
                   </div>
                   
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                     {app.description}
                   </p>
                   
                   {/* Benefits indicator */}
                   <div className="flex items-center space-x-4 pt-2">
-                    <div className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-green-400 rounded-full" />
-                      <span className="text-xs text-muted-foreground">Zero Emissions</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-blue-400 rounded-full" />
-                      <span className="text-xs text-muted-foreground">Cold Air Cooling</span>
-                    </div>
+                    {app.tags.map((tag, index) => (
+                      <div key={index} className="flex items-center space-x-2">
+                        <div className={`w-1.5 h-1.5 sm:w-2 sm:h-2 ${tag.color} rounded-full`} />
+                        <span className="text-xs text-muted-foreground">{tag.label}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </Card>
@@ -239,9 +311,9 @@ export default function UseCases() {
         {/* Bottom CTA */}
         <div className="mt-16 text-center">
           <div className="inline-flex items-center space-x-2 text-muted-foreground">
-            <div className="h-px w-12 bg-border" />
-            <span className="text-sm font-medium">Ready to deploy clean energy?</span>
-            <div className="h-px w-12 bg-border" />
+            <div className="h-px w-8 sm:w-12 bg-border" />
+            <span className="text-xs sm:text-sm font-medium">Ready to deploy clean energy?</span>
+            <div className="h-px w-8 sm:w-12 bg-border" />
           </div>
         </div>
       </div>
