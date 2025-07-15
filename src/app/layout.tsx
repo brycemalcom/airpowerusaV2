@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import PerformanceMonitor from "@/components/common/PerformanceMonitor";
+import ScrollToTop from "@/components/common/ScrollToTop";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -31,6 +32,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} antialiased bg-background text-foreground`}
       >
+        <ScrollToTop />
         {children}
         <PerformanceMonitor />
       </body>
