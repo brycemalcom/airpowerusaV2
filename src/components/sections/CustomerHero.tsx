@@ -73,7 +73,7 @@ export default function CustomerHero() {
             muted
             loop
             playsInline
-            poster="/media/images/airstation_truck.png"
+
             onError={() => {
               console.log('Video failed to load, using gradient fallback');
             }}
