@@ -6,7 +6,7 @@ import {
   DollarSign,
   TrendingUp,
   Calendar,
-  Gift,
+  Award,
   Target,
   Building,
   Users,
@@ -17,7 +17,7 @@ const offeringDetails = [
   {
     icon: DollarSign,
     title: "Share Price",
-    value: "$2.00",
+    value: "$3.00",
     subtitle: "per share",
     color: "text-blue-400"
   },
@@ -29,10 +29,10 @@ const offeringDetails = [
     color: "text-cyan-400"
   },
   {
-    icon: Gift,
-    title: "Bonus",
-    value: "100",
-    subtitle: "Preferred Shares per $10K",
+    icon: Award,
+    title: "Proven Tech",
+    value: "Validated",
+    subtitle: "Real-world deployments",
     color: "text-cyan-300"
   },
   {
@@ -45,8 +45,8 @@ const offeringDetails = [
   {
     icon: Target,
     title: "Target Exit",
-    value: "OTC → NYSE",
-    subtitle: "Q4 2025 → 2026",
+    value: "NYSE",
+    subtitle: "Q4 2025-26",
     color: "text-blue-500"
   },
   {

@@ -17,7 +17,7 @@ const investmentReasons = [
     description: "Compressed air = ambient fuel source, no combustion, no waste",
     details: "Revolutionary technology that eliminates fuel costs and regulatory compliance issues, positioning us at the forefront of the $2.4 trillion clean energy market transition.",
     marketSize: "$2.4T",
-    marketLabel: "Clean Energy Market",
+    marketLabel: "Global Clean Energy Market",
     gradient: "from-green-500 to-emerald-500"
   },
   {

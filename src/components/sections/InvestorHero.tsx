@@ -143,8 +143,8 @@ export default function InvestorHero() {
         <div className="mt-8 mb-12">
           <div className="inline-flex items-center space-x-8 bg-black/30 backdrop-blur-sm rounded-2xl px-8 py-4 border border-white/20">
             <div className="text-center">
-              <div className="text-3xl font-bold text-blue-400">$2.00</div>
-              <div className="text-sm text-white/70">/ Share – Reg D Round I</div>
+              <div className="text-3xl font-bold text-blue-400">$3.00</div>
+              <div className="text-sm text-white/70">per share</div>
             </div>
             <div className="w-px h-12 bg-white/20"></div>
             <div className="text-center">
@@ -153,8 +153,8 @@ export default function InvestorHero() {
             </div>
             <div className="w-px h-12 bg-white/20"></div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-300">$77M+</div>
-              <div className="text-sm text-white/70">Quoted Interest</div>
+              <div className="text-3xl font-bold text-cyan-300">$25M</div>
+              <div className="text-sm text-white/70">Goal</div>
             </div>
           </div>
         </div>
