@@ -15,6 +15,7 @@ const navigation = [
 const hamburgerMenu = [
   { name: "For Customers", href: "/customer", color: "text-blue-400" },
   { name: "For Investors", href: "/invest", color: "text-cyan-400" },
+  { name: "Newsroom", href: "/newsroom", color: "text-purple-400" },
 ];
 
 export default function Header() {

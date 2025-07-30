@@ -12,7 +12,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "AirPower USA | Revolutionary Clean Energy Technology",
-  description: "Zero-emission compressed air engine systems powering the future. From mobile 50kW units to 1.5MW containerized power stations.",
+  description: "Zero-emission compressed air engine systems powering the future. Available in 20-foot (0.5MW) and 40-foot (1.5MW) containerized platforms.",
   keywords: ["clean energy", "compressed air engine", "zero emissions", "mobile power", "sustainable technology"],
   authors: [{ name: "AirPower USA" }],
 };

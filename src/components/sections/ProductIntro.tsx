@@ -17,7 +17,7 @@ import {
 const features = [
   {
     icon: Container,
-    title: "40-foot containerized platform",
+    title: "Available in 20-foot (0.5MW) and 40-foot (1.5MW) containerized platforms",
     description: "Complete mobility and rapid deployment"
   },
   {
@@ -32,7 +32,7 @@ const features = [
   },
   {
     icon: Clock,
-    title: "Runs up to 16 hours continuously",
+    title: "Up to 16 hours runtime per fill cycle",
     description: "Extended operation without refueling"
   },
   {
@@ -47,7 +47,7 @@ const features = [
   },
   {
     icon: Home,
-    title: "Powers up to 400 homes per day",
+    title: "Up to 400 homes/day",
     description: "Industrial-scale clean energy solution"
   },
   {
@@ -99,15 +99,21 @@ export default function ProductIntro() {
             </div>
 
             {/* Floating stats card */}
-            <Card className="absolute -bottom-6 -right-6 p-6 bg-card/95 backdrop-blur-sm border-border">
-              <div className="grid grid-cols-2 gap-4 text-center">
-                <div>
+            <Card className="absolute -bottom-6 -right-6 p-4 bg-card/95 backdrop-blur-sm border-border">
+              <div className="flex items-center gap-6">
+                <div className="text-center">
                   <div className="text-lg font-bold text-foreground">3 min</div>
                   <div className="text-xs text-muted-foreground">Fill Time</div>
                 </div>
-                <div>
+                <div className="w-px h-12 bg-border"></div>
+                <div className="text-center">
                   <div className="text-lg font-bold text-foreground">16 hrs</div>
                   <div className="text-xs text-muted-foreground">Runtime</div>
+                </div>
+                <div className="w-px h-12 bg-border"></div>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-primary">0.5-1.5MW</div>
+                  <div className="text-xs text-muted-foreground">Output</div>
                 </div>
               </div>
             </Card>
@@ -120,10 +126,10 @@ export default function ProductIntro() {
                 Zero-emission, closed-loop energy solution
               </h3>
               <p className="text-lg leading-relaxed text-muted-foreground">
-                The AirPower Station is a zero-emission, closed-loop energy solution — built into a 40-foot container and ready to deploy anywhere. It includes our proprietary compressed air engine (CAE), integrated generator, air tanks, and optional BESS (Battery Energy Storage System).
+                The AirPower Station is a zero-emission, closed-loop energy solution — available in 20-foot (0.5MW) and 40-foot (1.5MW) containerized platforms and ready to deploy anywhere. It includes our proprietary compressed air engine (CAE), integrated generator, air tanks, and optional BESS (Battery Energy Storage System).
               </p>
               <p className="text-lg leading-relaxed text-muted-foreground mt-4">
-                Designed to run continuously with cold air as its only exhaust, the AirPower Station delivers scalable, on-demand power wherever it&apos;s needed — without fuel, without emissions, and without compromise. With just a 3-minute air tank fill, it provides up to 16 hours of continuous power generation.
+                Designed to run continuously with cold air as its only exhaust, the AirPower Station delivers scalable, on-demand power wherever it's needed — without fuel, without emissions, and without compromise. With just a 3-minute air tank fill, it provides up to 16 hours runtime per fill cycle.
               </p>
             </div>
 

@@ -17,7 +17,7 @@ const steps = [
     number: "01",
     icon: Wind,
     title: "Ambient Air Compression",
-    description: "Air is drawn from the atmosphere and compressed into onboard storage tanks using an integrated compressor system. The tanks in the AirPower Station fill in just 3 minutes to power the CAE for 16 hours of continuous operation.",
+    description: "Air is drawn from the atmosphere and compressed into onboard storage tanks using an integrated compressor system. The tanks in the AirPower Station fill in just 3 minutes to power the CAE for up to 16 hours runtime per fill cycle.",
     visual: {
       type: "image",
       src: "/media/images/air_tanks.png",
@@ -124,7 +124,7 @@ export default function Technology() {
             <p className="text-base sm:text-lg leading-relaxed text-muted-foreground">
               AirPower&apos;s patented system transforms ambient air into clean, on-demand power using a closed-loop cycle. 
               With no fuel, no combustion, and only cold air as its byproduct, the AirPower Station redefines how energy 
-              is generated, stored, and delivered — all within a portable, 40-foot container.
+              is generated, stored, and delivered — available in 20-foot (0.5MW) and 40-foot (1.5MW) containerized platforms.
             </p>
           </div>
         </div>

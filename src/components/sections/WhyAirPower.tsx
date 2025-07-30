@@ -33,7 +33,7 @@ const benefits = [
     icon: Truck,
     title: "Mobile & Modular",
     description: "Drop-in units ready for field deployment",
-    details: "Containerized and truck-deployable systems designed for rapid deployment anywhere. Scalable from 50kW mobile units to 1.5MW containerized power stations.",
+    details: "Containerized and truck-deployable systems designed for rapid deployment anywhere. Available in 20-foot (0.5MW) and 40-foot (1.5MW) containerized configurations, plus 50kW mobile units.",
     gradient: "from-purple-500 to-violet-500",
     bgColor: "bg-purple-500/10"
   },

@@ -39,16 +39,16 @@ const configurations = [
   },
   {
     id: 2,
-    title: "Containerized Station (40ft)",
-    subtitle: "Full AirPower Station with integrated BESS",
-    description: "1.5MW output, powers up to 400 homes/day. Stationary or truck-portable infrastructure.",
+    title: "Containerized Station",
+    subtitle: "Available in 20-foot (0.5MW) and 40-foot (1.5MW) configurations",
+    description: "Full AirPower Station with integrated BESS. Stationary or truck-portable infrastructure.",
     icon: Container,
     category: "Industrial",
     specifications: [
-      { label: "Power Output", value: "1.5MW" },
-      { label: "Daily Capacity", value: "400 homes" },
+      { label: "Power Output", value: "Up to 0.5MW (20ft) or 1.5MW (40ft)" },
+      { label: "Daily Capacity", value: "Up to 400 homes/day" },
       { label: "Battery Storage", value: "Optional BESS" },
-      { label: "Runtime", value: "16+ hours continuous" }
+      { label: "Runtime", value: "Up to 16 hours runtime per fill cycle" }
     ],
     features: ["Industrial scale", "BESS integration", "Containerized", "Grid-level power"],
     visual: {
@@ -136,7 +136,7 @@ export default function ModularConfigurations() {
           <div className="mt-8 p-6 rounded-xl bg-background/50 border border-border">
             <p className="text-base sm:text-lg leading-relaxed text-muted-foreground">
               The AirPower Station isn&apos;t just one product — it&apos;s a flexible energy platform that adapts to your mission. 
-              Whether truck-mounted, containerized, or trailer-based, each unit delivers our full CAE + generator system, 
+              Whether truck-mounted or available in 20-foot (0.5MW) and 40-foot (1.5MW) containerized configurations, each unit delivers our full CAE + generator system, 
               with optional BESS for battery storage.
             </p>
             <p className="text-base sm:text-lg leading-relaxed text-muted-foreground mt-4">
