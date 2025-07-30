@@ -2,7 +2,7 @@
 
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Play, Clock, Eye } from "lucide-react";
+import { Play, Eye } from "lucide-react";
 import { useState } from "react";
 
 // Video data - you can update these with your actual video files and metadata
@@ -14,7 +14,6 @@ const videos = [
     src: "/media/videos/airpowerstation.mp4",
     thumbnail: "/media/videos/airpowerstation.mp4", // Using video itself for thumbnail
     thumbnailType: "video", // video or image
-    duration: "3:45", // Update with actual duration
     category: "Product Demo",
     views: "2.8K"
   },
@@ -25,7 +24,6 @@ const videos = [
     src: "https://airpowe-videos.s3.us-east-2.amazonaws.com/cae_startup2.mp4",
     thumbnail: "https://airpowe-videos.s3.us-east-2.amazonaws.com/cae_startup2.mp4", // Using S3 video thumbnail
     thumbnailType: "video", // video or image
-    duration: "4:12", // Update with actual duration
     category: "Technology",
     views: "1.9K"
   },
@@ -36,7 +34,6 @@ const videos = [
     src: "https://airpowe-videos.s3.us-east-2.amazonaws.com/cae_rd.mp4",
     thumbnail: "https://airpowe-videos.s3.us-east-2.amazonaws.com/cae_rd.mp4", // Using S3 video thumbnail
     thumbnailType: "video", // video or image
-    duration: "5:23", // Update with actual duration
     category: "R&D",
     views: "1.5K"
   },
@@ -47,7 +44,6 @@ const videos = [
     src: "https://airpowe-videos.s3.us-east-2.amazonaws.com/airpower_prototype.mp4",
     thumbnail: "https://airpowe-videos.s3.us-east-2.amazonaws.com/airpower_prototype.mp4", // Using S3 video thumbnail
     thumbnailType: "video", // video or image
-    duration: "6:30", // Update with actual duration
     category: "Field Testing",
     views: "3.2K"
   }
@@ -122,12 +118,6 @@ export default function VideoGallery() {
                   <div className="bg-white/20 backdrop-blur-sm rounded-full p-4">
                     <Play className="w-8 h-8 text-white fill-white" />
                   </div>
-                </div>
-
-                {/* Duration badge */}
-                <div className="absolute bottom-3 right-3 bg-black/80 text-white px-2 py-1 rounded text-sm flex items-center">
-                  <Clock className="w-3 h-3 mr-1" />
-                  {video.duration}
                 </div>
 
                 {/* Category badge */}
