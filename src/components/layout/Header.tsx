@@ -10,6 +10,7 @@ const navigation = [
   { name: "Technology", href: "/#products" },
   { name: "Use Cases", href: "/#use-cases" },
   { name: "Products", href: "/#modular-configurations" },
+  { name: "Newsroom", href: "/newsroom" },
 ];
 
 const hamburgerMenu = [

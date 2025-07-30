@@ -5,58 +5,64 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Calendar, ExternalLink, FileText, Newspaper } from "lucide-react";
 
-// Placeholder news data - you can replace with real content
+// Placeholder news data - professional "coming soon" placeholders
 const pressReleases = [
   {
     id: 1,
-    title: "AirPower USA Announces Revolutionary Compressed Air Engine Technology",
-    excerpt: "Company unveils breakthrough clean energy platform capable of generating power from ambient air with zero emissions.",
-    date: "2024-01-15",
-    category: "Product Launch",
-    link: "#"
+    title: "Press Releases",
+    excerpt: "Official company announcements, product launches, and major milestones will be featured here.",
+    date: "Coming Soon",
+    category: "Official Updates",
+    link: "#",
+    isPlaceholder: true
   },
   {
     id: 2,
-    title: "Military Partnership Validates AirPower Technology for Defense Applications",
-    excerpt: "Successful field testing demonstrates reliability for critical military operations and remote deployment scenarios.",
-    date: "2024-01-08", 
-    category: "Partnership",
-    link: "#"
+    title: "Company News", 
+    excerpt: "Stay updated on AirPower USA's latest developments, partnerships, and breakthrough achievements.",
+    date: "Coming Soon",
+    category: "Company News",
+    link: "#",
+    isPlaceholder: true
   },
   {
     id: 3,
-    title: "Investment Round Opens for Clean Energy Innovation",
-    excerpt: "Regulation D offering now available for accredited investors to support scaling of containerized power solutions.",
-    date: "2024-01-02",
-    category: "Investment",
-    link: "#"
+    title: "Product Announcements",
+    excerpt: "Be the first to know about new product releases, technical innovations, and deployment updates.",
+    date: "Coming Soon",
+    category: "Product Updates",
+    link: "#",
+    isPlaceholder: true
   }
 ];
 
 const mediaCoverage = [
   {
     id: 1,
-    title: "Clean Energy Breakthrough: Power from Thin Air",
-    publication: "Energy Technology Magazine",
-    date: "2024-01-20",
-    excerpt: "In-depth analysis of AirPower&apos;s compressed air engine technology and its potential market impact.",
-    link: "#"
+    title: "Industry Publications",
+    publication: "Coming Soon",
+    date: "Stay Tuned",
+    excerpt: "Coverage from leading energy and technology publications will be featured here as our story unfolds.",
+    link: "#",
+    isPlaceholder: true
   },
   {
     id: 2,
-    title: "Military Applications Drive Clean Energy Innovation",
-    publication: "Defense Technology Today",
-    date: "2024-01-18",
-    excerpt: "How AirPower&apos;s mobile solutions are addressing critical power needs in remote military operations.",
-    link: "#"
+    title: "Expert Analysis",
+    publication: "Coming Soon", 
+    date: "Stay Tuned",
+    excerpt: "In-depth analysis and commentary from industry experts and thought leaders in clean energy.",
+    link: "#",
+    isPlaceholder: true
   },
   {
     id: 3,
-    title: "Off-Grid Power Solutions Gain Investment Interest",
-    publication: "CleanTech Investor",
-    date: "2024-01-12",
-    excerpt: "Market analysis of containerized energy platforms and their role in the clean energy transition.",
-    link: "#"
+    title: "Media Interviews",
+    publication: "Coming Soon",
+    date: "Stay Tuned", 
+    excerpt: "Interviews with our leadership team and technical experts as featured in various media outlets.",
+    link: "#",
+    isPlaceholder: true
   }
 ];
 
@@ -84,18 +90,18 @@ export default function NewsSection() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {pressReleases.map((release) => (
-              <Card key={release.id} className="group hover:shadow-lg transition-all duration-300 hover:scale-[1.02]">
+              <Card key={release.id} className={`group hover:shadow-lg transition-all duration-300 hover:scale-[1.02] ${release.isPlaceholder ? 'bg-muted/30 border-dashed border-2' : ''}`}>
                 <CardHeader>
                   <div className="flex items-center justify-between mb-2">
-                    <Badge variant="outline">
+                    <Badge variant={release.isPlaceholder ? "secondary" : "outline"} className={release.isPlaceholder ? "opacity-60" : ""}>
                       {release.category}
                     </Badge>
                     <div className="flex items-center text-sm text-muted-foreground">
                       <Calendar className="w-4 h-4 mr-1" />
-                      {new Date(release.date).toLocaleDateString()}
+                      {release.date}
                     </div>
                   </div>
-                  <CardTitle className="line-clamp-2 group-hover:text-primary transition-colors">
+                  <CardTitle className={`line-clamp-2 transition-colors ${release.isPlaceholder ? 'text-muted-foreground' : 'group-hover:text-primary'}`}>
                     {release.title}
                   </CardTitle>
                 </CardHeader>
@@ -103,10 +109,17 @@ export default function NewsSection() {
                   <CardDescription className="leading-relaxed mb-4">
                     {release.excerpt}
                   </CardDescription>
-                  <Button variant="outline" size="sm" className="group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                    <FileText className="w-4 h-4 mr-2" />
-                    Read Full Release
-                  </Button>
+                  {release.isPlaceholder ? (
+                    <div className="flex items-center text-sm text-muted-foreground font-medium">
+                      <FileText className="w-4 h-4 mr-2" />
+                      Coming Soon
+                    </div>
+                  ) : (
+                    <Button variant="outline" size="sm" className="group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                      <FileText className="w-4 h-4 mr-2" />
+                      Read Full Release
+                    </Button>
+                  )}
                 </CardContent>
               </Card>
             ))}
@@ -132,21 +145,21 @@ export default function NewsSection() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {mediaCoverage.map((article) => (
-              <Card key={article.id} className="group hover:shadow-lg transition-all duration-300 hover:scale-[1.02]">
+              <Card key={article.id} className={`group hover:shadow-lg transition-all duration-300 hover:scale-[1.02] ${article.isPlaceholder ? 'bg-muted/30 border-dashed border-2' : ''}`}>
                 <CardHeader>
                   <div className="flex items-center justify-between mb-2">
-                    <Badge variant="outline" className="bg-purple-500/10 text-purple-400 border-purple-500/20">
+                    <Badge variant="outline" className={`${article.isPlaceholder ? 'bg-purple-500/5 text-purple-400/60 border-purple-500/10 opacity-60' : 'bg-purple-500/10 text-purple-400 border-purple-500/20'}`}>
                       External
                     </Badge>
                     <div className="flex items-center text-sm text-muted-foreground">
                       <Calendar className="w-4 h-4 mr-1" />
-                      {new Date(article.date).toLocaleDateString()}
+                      {article.date}
                     </div>
                   </div>
-                  <CardTitle className="line-clamp-2 group-hover:text-primary transition-colors">
+                  <CardTitle className={`line-clamp-2 transition-colors ${article.isPlaceholder ? 'text-muted-foreground' : 'group-hover:text-primary'}`}>
                     {article.title}
                   </CardTitle>
-                  <CardDescription className="font-medium text-primary">
+                  <CardDescription className={`font-medium ${article.isPlaceholder ? 'text-muted-foreground/60' : 'text-primary'}`}>
                     {article.publication}
                   </CardDescription>
                 </CardHeader>
@@ -154,10 +167,17 @@ export default function NewsSection() {
                   <p className="text-muted-foreground leading-relaxed mb-4">
                     {article.excerpt}
                   </p>
-                  <Button variant="outline" size="sm" className="group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    Read Article
-                  </Button>
+                  {article.isPlaceholder ? (
+                    <div className="flex items-center text-sm text-muted-foreground font-medium">
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      Stay Tuned
+                    </div>
+                  ) : (
+                    <Button variant="outline" size="sm" className="group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      Read Article
+                    </Button>
+                  )}
                 </CardContent>
               </Card>
             ))}
@@ -169,15 +189,15 @@ export default function NewsSection() {
           <div className="inline-flex items-center justify-center p-8 rounded-2xl bg-gradient-to-br from-purple-500/10 to-violet-500/10 border border-purple-500/20 backdrop-blur-sm">
             <div className="max-w-3xl">
               <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-4">
-                Stay Updated with AirPower News
+                Stay Connected with AirPower USA
               </h3>
               <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-6">
-                Get the latest updates on our technology breakthroughs, partnerships, and market developments delivered to your inbox.
+                This newsroom will feature the latest updates on our technology breakthroughs, partnerships, and market developments. Check back regularly for announcements.
               </p>
-              <Button size="lg" className="bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-500 hover:to-violet-500">
+              <div className="flex items-center justify-center text-sm text-muted-foreground">
                 <Newspaper className="w-5 h-5 mr-2" />
-                Subscribe to Updates
-              </Button>
+                <span>News updates coming soon</span>
+              </div>
             </div>
           </div>
         </div>
