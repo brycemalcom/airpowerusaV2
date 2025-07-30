@@ -85,7 +85,7 @@ export default function Footer() {
         
         <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
           <p className="text-sm text-muted-foreground">
-            © 2024 AirPower USA. All rights reserved.
+            © 2025 AirPower USA. All rights reserved.
           </p>
           <div className="flex space-x-6">
             <a href="#privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
