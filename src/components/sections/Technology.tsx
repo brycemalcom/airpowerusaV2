@@ -77,7 +77,7 @@ const steps = [
     number: "06",
     icon: Truck,
     title: "Deployment & Use",
-    description: "The AirPower Station can be installed on-site, mounted on trucks, or delivered to remote locations. It's built to power everything from data centers and grow operations to disaster relief zones and off-grid microgrids.",
+    description: "The AirPower Station can be installed on-site, mounted on trucks, or delivered to remote locations. It&apos;s built to power everything from data centers and grow operations to disaster relief zones and off-grid microgrids.",
     visual: {
       type: "image",
       src: "/media/images/airstation_truck.png",

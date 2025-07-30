@@ -65,7 +65,7 @@ const customerSegments = [
   {
     id: 6,
     title: "EV Charging & Transport",
-    description: "Clean power where grid access can't reach",
+    description: "Clean power where grid access can&apos;t reach",
     icon: Car,
     category: "Mobility",
     details: "Rapid-deploy energy stations and mobile charging infrastructure for electric vehicle hubs, rest stops, utility fleets, and edge mobility applications—powered by compressed air.",

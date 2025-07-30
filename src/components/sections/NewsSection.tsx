@@ -39,7 +39,7 @@ const mediaCoverage = [
     title: "Clean Energy Breakthrough: Power from Thin Air",
     publication: "Energy Technology Magazine",
     date: "2024-01-20",
-    excerpt: "In-depth analysis of AirPower's compressed air engine technology and its potential market impact.",
+    excerpt: "In-depth analysis of AirPower&apos;s compressed air engine technology and its potential market impact.",
     link: "#"
   },
   {
@@ -47,7 +47,7 @@ const mediaCoverage = [
     title: "Military Applications Drive Clean Energy Innovation",
     publication: "Defense Technology Today",
     date: "2024-01-18",
-    excerpt: "How AirPower's mobile solutions are addressing critical power needs in remote military operations.",
+    excerpt: "How AirPower&apos;s mobile solutions are addressing critical power needs in remote military operations.",
     link: "#"
   },
   {
@@ -126,7 +126,7 @@ export default function NewsSection() {
               </span>
             </h2>
             <p className="mt-6 text-lg leading-8 text-muted-foreground">
-              Industry publications and media outlets covering AirPower's technology and market impact.
+              Industry publications and media outlets covering AirPower&apos;s technology and market impact.
             </p>
           </div>
 

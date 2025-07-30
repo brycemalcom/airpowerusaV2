@@ -108,7 +108,7 @@ const applications = [
   {
     id: 6,
     title: "Off-Grid Construction",
-    subtitle: "Jobsite power where the grid can't reach",
+    subtitle: "Jobsite power where the grid can&apos;t reach",
     description: "Power construction equipment, tools, and temporary facilities at remote jobsites. Build infrastructure anywhere without requiring grid connection first.",
     icon: HardHat,
     category: "Industrial",
