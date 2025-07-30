@@ -11,10 +11,32 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "AirPower USA | Revolutionary Clean Energy Technology",
-  description: "Zero-emission compressed air engine systems powering the future. Available in 20-foot (0.5MW) and 40-foot (1.5MW) containerized platforms.",
+  title: "AirPower USA | Clean Power From Thin Air",
+  description: "Zero-emission compressed air engine systems powering the future. Deployable clean energy engineered for anywhere the grid can't reach.",
   keywords: ["clean energy", "compressed air engine", "zero emissions", "mobile power", "sustainable technology"],
   authors: [{ name: "AirPower USA" }],
+  openGraph: {
+    title: "AirPower USA | Clean Power From Thin Air",
+    description: "Zero-emission compressed air engine systems powering the future. Deployable clean energy engineered for anywhere the grid can't reach.",
+    url: "https://airpowerusa.com",
+    siteName: "AirPower USA",
+    images: [
+      {
+        url: "/media/images/airpowerlogo2.png",
+        width: 1200,
+        height: 630,
+        alt: "AirPower USA - Clean Power From Thin Air",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AirPower USA | Clean Power From Thin Air",
+    description: "Zero-emission compressed air engine systems powering the future. Deployable clean energy engineered for anywhere the grid can't reach.",
+    images: ["/media/images/airpowerlogo2.png"],
+  },
 };
 
 export const viewport: Viewport = {

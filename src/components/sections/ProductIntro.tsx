@@ -2,6 +2,7 @@
 
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useState } from "react";
 import { 
   Container, 
   Battery, 
@@ -10,7 +11,9 @@ import {
   Gauge, 
   Truck, 
   Home,
-  Wind 
+  Wind,
+  VolumeX,
+  Volume2
 } from "lucide-react";
 // import Image from "next/image"; // Uncomment when adding the actual image
 
@@ -58,6 +61,12 @@ const features = [
 ];
 
 export default function ProductIntro() {
+  const [isVideoMuted, setIsVideoMuted] = useState(true);
+
+  const toggleVideoSound = () => {
+    setIsVideoMuted(!isVideoMuted);
+  };
+
   return (
     <section id="products" className="py-24 bg-background">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -81,21 +90,40 @@ export default function ProductIntro() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
           {/* Video Section */}
           <div className="relative">
-            <div className="aspect-[4/3] relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 border border-border">
+            <div 
+              className="aspect-[4/3] relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 border border-border cursor-pointer group"
+              onClick={toggleVideoSound}
+            >
               {/* AirPower Station Video */}
               <video
                 className="absolute inset-0 w-full h-full object-cover"
                 autoPlay
                 loop
-                muted
+                muted={isVideoMuted}
                 playsInline
               >
                 <source src="/media/videos/airpower_station_loop.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
               
-              {/* Gradient overlay */}
+              {/* Sound toggle overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+              <div className="absolute top-4 right-4 bg-black/50 rounded-full p-3 transition-all duration-300 group-hover:bg-black/70">
+                {isVideoMuted ? (
+                  <VolumeX className="w-6 h-6 text-white" />
+                ) : (
+                  <Volume2 className="w-6 h-6 text-white" />
+                )}
+              </div>
+              
+              {/* Click hint */}
+              {isVideoMuted && (
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="bg-black/70 rounded-lg px-4 py-2 text-white text-sm font-medium">
+                    Click to hear how quiet it is
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Floating stats card */}
