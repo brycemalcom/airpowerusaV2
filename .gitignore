@@ -42,8 +42,3 @@ next-env.d.ts
 
 # Local Netlify folder
 .netlify
-
-# Large video files (over GitHub 100MB limit)
-public/media/videos/airpower_prototype.mp4
-public/media/videos/cae_rd.mp4
-public/media/videos/cae_startup2.mp4

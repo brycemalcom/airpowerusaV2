@@ -22,8 +22,8 @@ const videos = [
     id: 2,
     title: "AirPower CAE Start-Up & Power Demonstration",
     description: "Watch the AirPower Compressed Air Engine come online in our controlled test environment. This demo features full system start-up, cold air exhaust venting at -20°C, and sequential activation of high-output industrial lighting—proof of the platform&apos;s rapid response, stable output, and clean, reliable power delivery.",
-    src: "/media/videos/cae_startup2.mp4",
-    thumbnail: "/media/videos/cae_startup2.mp4", // Using video thumbnail - encoding fixed!
+    src: "https://airpowe-videos.s3.us-east-2.amazonaws.com/cae_startup2.mp4",
+    thumbnail: "https://airpowe-videos.s3.us-east-2.amazonaws.com/cae_startup2.mp4", // Using S3 video thumbnail
     thumbnailType: "video", // video or image
     duration: "4:12", // Update with actual duration
     category: "Technology",
@@ -33,8 +33,8 @@ const videos = [
     id: 3,
     title: "Compact AirPower Unit — Scaled-Down System Demonstration",
     description: "Step inside our French R&D facility for a demonstration of the scaled-down AirPower CAE platform. This compact unit delivers the same zero-emission performance in a reduced footprint—running quietly, powering industrial loads, and producing -35°C cold air exhaust for versatile applications from mobile power to microgrid deployment.",
-    src: "/media/videos/cae_rd.mp4",
-    thumbnail: "/media/videos/cae_rd.mp4", // Using video thumbnail - encoding fixed!
+    src: "https://airpowe-videos.s3.us-east-2.amazonaws.com/cae_rd.mp4",
+    thumbnail: "https://airpowe-videos.s3.us-east-2.amazonaws.com/cae_rd.mp4", // Using S3 video thumbnail
     thumbnailType: "video", // video or image
     duration: "5:23", // Update with actual duration
     category: "R&D",
@@ -44,8 +44,8 @@ const videos = [
     id: 4,
     title: "AirPower Vehicle Integration — Engine Build & Field Test",
     description: "Go behind the scenes of our prototype vehicle integration. Watch the complete CAE installation process—engine assembly, component integration, and full vehicle rebuild—followed by real-world test drive. See how our zero-emission technology delivers seamless power and whisper-quiet operation on the road.",
-    src: "/media/videos/airpower_prototype.mp4",
-    thumbnail: "/media/videos/airpower_prototype.mp4", // Using video itself for thumbnail
+    src: "https://airpowe-videos.s3.us-east-2.amazonaws.com/airpower_prototype.mp4",
+    thumbnail: "https://airpowe-videos.s3.us-east-2.amazonaws.com/airpower_prototype.mp4", // Using S3 video thumbnail
     thumbnailType: "video", // video or image
     duration: "6:30", // Update with actual duration
     category: "Field Testing",
