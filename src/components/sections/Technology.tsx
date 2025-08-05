@@ -9,7 +9,9 @@ import {
   Battery,
   Thermometer,
   Database,
-  Truck
+  Truck,
+  VolumeX,
+  Volume2
 } from "lucide-react";
 
 const steps = [
@@ -89,6 +91,7 @@ const steps = [
 
 export default function Technology() {
   const [isMobile, setIsMobile] = useState(false);
+  const [isEngineVideoMuted, setIsEngineVideoMuted] = useState(true);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -98,6 +101,10 @@ export default function Technology() {
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
+
+  const toggleEngineVideoSound = () => {
+    setIsEngineVideoMuted(!isEngineVideoMuted);
+  };
 
 
 
@@ -190,16 +197,44 @@ export default function Technology() {
                         <>
                           {/* Video for desktop */}
                           {!isMobile ? (
-                            <video
-                              className="absolute inset-0 w-full h-full object-cover"
-                              autoPlay
-                              loop
-                              muted
-                              playsInline
-                            >
-                              <source src={step.visual.src} type="video/mp4" />
-                              Your browser does not support the video tag.
-                            </video>
+                            <>
+                              <video
+                                className="absolute inset-0 w-full h-full object-cover"
+                                autoPlay
+                                loop
+                                muted={step.number === "02" ? isEngineVideoMuted : true}
+                                playsInline
+                              >
+                                <source src={step.visual.src} type="video/mp4" />
+                                Your browser does not support the video tag.
+                              </video>
+                              
+                              {/* Clickable overlay for Engine Activation video only */}
+                              {step.number === "02" && (
+                                <div 
+                                  className="absolute inset-0 w-full h-full cursor-pointer group z-10"
+                                  onClick={toggleEngineVideoSound}
+                                >
+                                  {/* Sound toggle icon */}
+                                  <div className="absolute top-4 right-4 bg-black/50 rounded-full p-3 transition-all duration-300 group-hover:bg-black/70 z-20">
+                                    {isEngineVideoMuted ? (
+                                      <VolumeX className="w-6 h-6 text-white" />
+                                    ) : (
+                                      <Volume2 className="w-6 h-6 text-white" />
+                                    )}
+                                  </div>
+                                  
+                                  {/* Click hint */}
+                                  {isEngineVideoMuted && (
+                                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
+                                      <div className="bg-black/70 rounded-lg px-4 py-2 text-white text-sm font-medium">
+                                        Click to hear the engine
+                                      </div>
+                                    </div>
+                                  )}
+                                </div>
+                              )}
+                            </>
                           ) : (
                             /* Mobile fallback */
                             <div className="text-center p-8">
@@ -216,7 +251,7 @@ export default function Technology() {
                             </div>
                           )}
                           {/* Gradient overlay for video */}
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none" />
                         </>
                       ) : (
                         <>

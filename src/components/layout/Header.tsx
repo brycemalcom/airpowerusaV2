@@ -11,12 +11,14 @@ const navigation = [
   { name: "Use Cases", href: "/#use-cases" },
   { name: "Products", href: "/#modular-configurations" },
   { name: "Newsroom", href: "/newsroom" },
+  { name: "Video Gallery", href: "/videos" },
 ];
 
 const hamburgerMenu = [
   { name: "For Customers", href: "/customer", color: "text-blue-400" },
   { name: "For Investors", href: "/invest", color: "text-cyan-400" },
   { name: "Newsroom", href: "/newsroom", color: "text-purple-400" },
+  { name: "Video Gallery", href: "/videos", color: "text-pink-400" },
 ];
 
 export default function Header() {
@@ -51,6 +53,9 @@ export default function Header() {
               className={`w-auto transition-all duration-300 ${
                 isScrolled ? 'h-12 sm:h-14 lg:h-16' : 'h-16 sm:h-20 lg:h-24'
               }`}
+              style={{
+                filter: !isScrolled ? 'contrast(1.1) brightness(1.05) drop-shadow(0 1px 2px rgba(0,0,0,0.3))' : 'none'
+              }}
               sizes="(max-width: 640px) 200px, (max-width: 1024px) 250px, 300px"
               priority
               loading="eager"

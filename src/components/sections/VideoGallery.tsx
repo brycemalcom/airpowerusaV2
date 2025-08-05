@@ -22,8 +22,8 @@ const videos = [
     title: "AirPower CAE Start-Up & Power Demonstration",
     description: "Watch the AirPower Compressed Air Engine come online in our controlled test environment. This demo features full system start-up, cold air exhaust venting at -20°C, and sequential activation of high-output industrial lighting—proof of the platform&apos;s rapid response, stable output, and clean, reliable power delivery.",
     src: "https://airpowe-videos.s3.us-east-2.amazonaws.com/cae_startup2.mp4",
-    thumbnail: "https://airpowe-videos.s3.us-east-2.amazonaws.com/cae_startup2.mp4", // Using S3 video thumbnail
-    thumbnailType: "video", // video or image
+    thumbnail: "/media/images/tech_thumbnail.png",
+    thumbnailType: "image",
     category: "Technology",
     views: "1.9K"
   },
@@ -32,8 +32,8 @@ const videos = [
     title: "Compact AirPower Unit — Scaled-Down System Demonstration",
     description: "Step inside our French R&D facility for a demonstration of the scaled-down AirPower CAE platform. This compact unit delivers the same zero-emission performance in a reduced footprint—running quietly, powering industrial loads, and producing -35°C cold air exhaust for versatile applications from mobile power to microgrid deployment.",
     src: "https://airpowe-videos.s3.us-east-2.amazonaws.com/cae_rd.mp4",
-    thumbnail: "https://airpowe-videos.s3.us-east-2.amazonaws.com/cae_rd.mp4", // Using S3 video thumbnail
-    thumbnailType: "video", // video or image
+    thumbnail: "/media/images/rd_thumbnail.png",
+    thumbnailType: "image",
     category: "R&D",
     views: "1.5K"
   },
@@ -42,8 +42,8 @@ const videos = [
     title: "AirPower Vehicle Integration — Engine Build & Field Test",
     description: "Go behind the scenes of our prototype vehicle integration. Watch the complete CAE installation process—engine assembly, component integration, and full vehicle rebuild—followed by real-world test drive. See how our zero-emission technology delivers seamless power and whisper-quiet operation on the road.",
     src: "https://airpowe-videos.s3.us-east-2.amazonaws.com/airpower_prototype.mp4",
-    thumbnail: "https://airpowe-videos.s3.us-east-2.amazonaws.com/airpower_prototype.mp4", // Using S3 video thumbnail
-    thumbnailType: "video", // video or image
+    thumbnail: "/media/images/field_thumbnail.png",
+    thumbnailType: "image",
     category: "Field Testing",
     views: "3.2K"
   }
@@ -53,23 +53,8 @@ export default function VideoGallery() {
   const [selectedVideo, setSelectedVideo] = useState<typeof videos[0] | null>(null);
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-16 bg-background">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        {/* Header */}
-        <div className="mx-auto max-w-3xl text-center mb-16">
-          <Badge variant="secondary" className="mb-4">
-            Video Content
-          </Badge>
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
-            Video
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-violet-300">
-              Gallery
-            </span>
-          </h2>
-          <p className="mt-6 text-lg sm:text-xl leading-8 text-muted-foreground">
-            Watch our technology in action with full demonstrations, technical overviews, and real-world deployments.
-          </p>
-        </div>
 
         {/* Video Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

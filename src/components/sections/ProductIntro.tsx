@@ -131,17 +131,17 @@ export default function ProductIntro() {
               <div className="flex items-center gap-6">
                 <div className="text-center">
                   <div className="text-lg font-bold text-foreground">3 min</div>
-                  <div className="text-xs text-muted-foreground">Fill Time</div>
+                  <div className="text-xs text-muted-foreground">Fill Time <span className="text-primary font-medium">(full capacity)</span></div>
                 </div>
                 <div className="w-px h-12 bg-border"></div>
                 <div className="text-center">
                   <div className="text-lg font-bold text-foreground">16 hrs</div>
-                  <div className="text-xs text-muted-foreground">Runtime</div>
+                  <div className="text-xs text-muted-foreground">Runtime <span className="text-primary font-medium">(full capacity)</span></div>
                 </div>
                 <div className="w-px h-12 bg-border"></div>
                 <div className="text-center">
-                  <div className="text-lg font-bold text-primary">0.5-1.5MW</div>
-                  <div className="text-xs text-muted-foreground">Output</div>
+                  <div className="text-lg font-bold text-primary">0.5–1.5MW</div>
+                  <div className="text-xs text-muted-foreground">Output Capacity</div>
                 </div>
               </div>
             </Card>

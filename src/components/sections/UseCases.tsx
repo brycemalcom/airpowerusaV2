@@ -24,7 +24,7 @@ const applications = [
     category: "Agriculture",
     visual: {
       type: "image",
-      src: "/media/images/grow-op.png",
+      src: "/media/images/agriculture.jpeg",
       alt: "Indoor grow facility with AirPower Station providing climate control"
     },
     categoryColor: "bg-green-500",
@@ -132,7 +132,7 @@ const applications = [
     category: "Transportation",
     visual: {
       type: "image",
-      src: "/media/images/ev-charging.png",
+      src: "/media/images/ev_charging.jpeg",
       alt: "EV charging station powered by AirPower Station technology"
     },
     categoryColor: "bg-emerald-500",

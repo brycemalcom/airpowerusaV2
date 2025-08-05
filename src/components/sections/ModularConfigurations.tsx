@@ -74,7 +74,7 @@ const configurations = [
     features: ["Silent operation", "Grid charging", "Long cycle life", "Modular design"],
     visual: {
       type: "image",
-      src: "/media/images/bess_commercial_storage.png",
+      src: "/media/images/bess.jpeg",
       alt: "Commercial BESS battery storage system"
     },
     categoryColor: "bg-purple-500"
