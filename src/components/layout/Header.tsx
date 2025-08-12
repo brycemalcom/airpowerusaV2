@@ -12,11 +12,13 @@ const navigation = [
   { name: "Products", href: "/#modular-configurations" },
   { name: "Newsroom", href: "/newsroom" },
   { name: "Video Gallery", href: "/videos" },
+  { name: "About", href: "/about" },
 ];
 
 const hamburgerMenu = [
   { name: "For Customers", href: "/customer", color: "text-blue-400" },
   { name: "For Investors", href: "/invest", color: "text-cyan-400" },
+  { name: "Investor FAQs", href: "/investor-faqs", color: "text-emerald-400" },
   { name: "Newsroom", href: "/newsroom", color: "text-purple-400" },
   { name: "Video Gallery", href: "/videos", color: "text-pink-400" },
 ];

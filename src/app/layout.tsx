@@ -22,10 +22,10 @@ export const metadata: Metadata = {
     siteName: "AirPower USA",
     images: [
       {
-        url: "/media/images/preview.png",
+        url: "/media/images/air_tanks.png",
         width: 1200,
         height: 630,
-        alt: "AirPower USA - Clean Power From Thin Air",
+        alt: "AirPower USA - Compressed Air Storage Technology",
       },
     ],
     locale: "en_US",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "AirPower USA | Clean Power From Thin Air",
     description: "Zero-emission compressed air engine systems powering the future. Deployable clean energy engineered for anywhere the grid can't reach.",
-    images: ["/media/images/preview.png"],
+    images: ["/media/images/air_tanks.png"],
   },
 };
 

@@ -11,7 +11,10 @@ import {
   HardHat,
   Car,
   Stethoscope,
-  Zap
+  Zap,
+  Shield,
+  Anchor,
+  Truck
 } from "lucide-react";
 
 const applications = [
@@ -176,6 +179,58 @@ const applications = [
       { color: "bg-yellow-400", label: "Grid Stability" },
       { color: "bg-indigo-400", label: "Utility-Scale" }
     ]
+  },
+  {
+    id: 10,
+    title: "Military Base & Field Power",
+    subtitle: "Secure, off-grid energy for mission success",
+    description: "Fully self-sustaining power and cooling systems for military bases, forward operating posts, and field deployments — zero emissions with minimal heat signature.",
+    icon: Shield,
+    category: "Defense",
+    visual: {
+      type: "placeholder",
+      placeholder: "Military Base Power System"
+    },
+    categoryColor: "bg-slate-600",
+    tags: [
+      { color: "bg-slate-400", label: "Military-Grade" },
+      { color: "bg-green-400", label: "Off-Grid Power" }
+    ]
+  },
+  {
+    id: 11,
+    title: "Naval & Maritime Defense",
+    subtitle: "Shipboard + dockside power & cooling",
+    description: "Air-powered systems for naval bases, shipyards, and vessel operations — delivering clean power, cold air, and mission-critical backup at sea or in port.",
+    icon: Anchor,
+    category: "Defense",
+    visual: {
+      type: "placeholder",
+      placeholder: "Naval Defense Power"
+    },
+    categoryColor: "bg-slate-600",
+    tags: [
+      { color: "bg-blue-400", label: "Maritime Power" },
+      { color: "bg-cyan-400", label: "Cold Air Cooling" }
+    ]
+  },
+  {
+    id: 12,
+    title: "Tactical Vehicle & Equipment Support",
+    subtitle: "Power on the move for defense operations",
+    description: "Deployable generator units and energy storage for armored vehicles, radar systems, communications hubs, and other mission-critical military assets.",
+    icon: Truck,
+    category: "Defense",
+    visual: {
+      type: "image",
+      src: "/media/images/tactical_vehicle.jpeg",
+      alt: "Tactical vehicle with AirPower Station for mobile defense operations"
+    },
+    categoryColor: "bg-slate-600",
+    tags: [
+      { color: "bg-orange-400", label: "Mobile Support" },
+      { color: "bg-purple-400", label: "Communications Ready" }
+    ]
   }
 ];
 
@@ -254,7 +309,11 @@ export default function UseCases() {
                       <div className="text-center">
                         <Icon className="h-12 w-12 sm:h-16 sm:w-16 text-muted-foreground mx-auto mb-4" />
                         <p className="text-xs sm:text-sm text-muted-foreground px-4">
-                          {typeof app.visual === 'string' ? app.visual : 'Coming Soon'}
+                          {typeof app.visual === 'object' && app.visual.type === 'placeholder' 
+                            ? (app.visual as { type: string; placeholder: string }).placeholder
+                            : typeof app.visual === 'string' 
+                            ? app.visual 
+                            : 'Coming Soon'}
                         </p>
                       </div>
                     </div>

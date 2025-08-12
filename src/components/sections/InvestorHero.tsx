@@ -191,8 +191,14 @@ export default function InvestorHero() {
         <div className="mt-12">
           <div className="max-w-2xl mx-auto bg-black/20 backdrop-blur-sm rounded-lg p-4">
             <p className="text-xs text-white/80 text-left leading-relaxed" style={{ fontSize: '12px', opacity: '0.8' }}>
-              This offering is available to accredited investors under Regulation D. 
-              Past performance does not guarantee future results. Please review all offering materials carefully.
+              This offering is available to accredited investors under Regulation D. Please see our{' '}
+              <a 
+                href="/investor-faqs" 
+                className="text-cyan-400 hover:text-cyan-300 underline transition-colors font-semibold"
+              >
+                Investor FAQs here
+              </a>
+              .
             </p>
           </div>
         </div>

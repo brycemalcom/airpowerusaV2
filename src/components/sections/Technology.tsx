@@ -92,6 +92,8 @@ const steps = [
 export default function Technology() {
   const [isMobile, setIsMobile] = useState(false);
   const [isEngineVideoMuted, setIsEngineVideoMuted] = useState(true);
+  const [isPowerGenVideoMuted, setIsPowerGenVideoMuted] = useState(true);
+  const [isColdAirVideoMuted, setIsColdAirVideoMuted] = useState(true);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -104,6 +106,14 @@ export default function Technology() {
 
   const toggleEngineVideoSound = () => {
     setIsEngineVideoMuted(!isEngineVideoMuted);
+  };
+
+  const togglePowerGenVideoSound = () => {
+    setIsPowerGenVideoMuted(!isPowerGenVideoMuted);
+  };
+
+  const toggleColdAirVideoSound = () => {
+    setIsColdAirVideoMuted(!isColdAirVideoMuted);
   };
 
 
@@ -202,22 +212,35 @@ export default function Technology() {
                                 className="absolute inset-0 w-full h-full object-cover"
                                 autoPlay
                                 loop
-                                muted={step.number === "02" ? isEngineVideoMuted : true}
+                                muted={
+                                  step.number === "02" ? isEngineVideoMuted :
+                                  step.number === "03" ? isPowerGenVideoMuted :
+                                  step.number === "04" ? isColdAirVideoMuted :
+                                  true
+                                }
                                 playsInline
                               >
-                                <source src={step.visual.src} type="video/mp4" />
+                                <source src={`${step.visual.src}?v=2024-12-19`} type="video/mp4" />
                                 Your browser does not support the video tag.
                               </video>
                               
-                              {/* Clickable overlay for Engine Activation video only */}
-                              {step.number === "02" && (
+                              {/* Clickable overlay for interactive videos */}
+                              {(step.number === "02" || step.number === "03" || step.number === "04") && (
                                 <div 
                                   className="absolute inset-0 w-full h-full cursor-pointer group z-10"
-                                  onClick={toggleEngineVideoSound}
+                                  onClick={
+                                    step.number === "02" ? toggleEngineVideoSound :
+                                    step.number === "03" ? togglePowerGenVideoSound :
+                                    step.number === "04" ? toggleColdAirVideoSound :
+                                    undefined
+                                  }
                                 >
                                   {/* Sound toggle icon */}
                                   <div className="absolute top-4 right-4 bg-black/50 rounded-full p-3 transition-all duration-300 group-hover:bg-black/70 z-20">
-                                    {isEngineVideoMuted ? (
+                                    {(step.number === "02" ? isEngineVideoMuted :
+                                      step.number === "03" ? isPowerGenVideoMuted :
+                                      step.number === "04" ? isColdAirVideoMuted :
+                                      true) ? (
                                       <VolumeX className="w-6 h-6 text-white" />
                                     ) : (
                                       <Volume2 className="w-6 h-6 text-white" />
@@ -225,10 +248,16 @@ export default function Technology() {
                                   </div>
                                   
                                   {/* Click hint */}
-                                  {isEngineVideoMuted && (
+                                  {(step.number === "02" ? isEngineVideoMuted :
+                                    step.number === "03" ? isPowerGenVideoMuted :
+                                    step.number === "04" ? isColdAirVideoMuted :
+                                    true) && (
                                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
                                       <div className="bg-black/70 rounded-lg px-4 py-2 text-white text-sm font-medium">
-                                        Click to hear the engine
+                                        {step.number === "02" ? "Click to hear the engine" :
+                                         step.number === "03" ? "Click to hear the power generation" :
+                                         step.number === "04" ? "Click here to hear how quiet" :
+                                         "Click to hear audio"}
                                       </div>
                                     </div>
                                   )}

@@ -102,7 +102,7 @@ export default function ProductIntro() {
                 muted={isVideoMuted}
                 playsInline
               >
-                <source src="/media/videos/airpower_station_loop.mp4" type="video/mp4" />
+                <source src="/media/videos/airpower_station_loop.mp4?v=2024-12-19" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
               

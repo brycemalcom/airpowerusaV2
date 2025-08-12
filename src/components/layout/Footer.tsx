@@ -6,13 +6,14 @@ const navigation = {
     { name: "Technology", href: "#technology" },
     { name: "Products", href: "#products" },
     { name: "Use Cases", href: "#use-cases" },
-    { name: "About", href: "#about" },
+    { name: "About", href: "/about" },
   ],
   support: [
     { name: "Documentation", href: "#docs" },
     { name: "Support", href: "#support" },
     { name: "Contact", href: "#contact" },
     { name: "Investor Relations", href: "#investors" },
+    { name: "Investor FAQs", href: "/investor-faqs" },
   ],
 };
 
