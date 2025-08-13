@@ -19,7 +19,7 @@ const pressReleases = [
   {
     id: 2,
     title: "Company News", 
-    excerpt: "Stay updated on AirPower USA's latest developments, partnerships, and breakthrough achievements.",
+    excerpt: "Stay updated on AirPower USA&apos;s latest developments, partnerships, and breakthrough achievements.",
     date: "Coming Soon",
     category: "Company News",
     link: "#",

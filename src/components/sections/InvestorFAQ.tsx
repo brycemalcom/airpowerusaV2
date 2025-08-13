@@ -13,7 +13,7 @@ const faqData = [
   {
     id: 2,
     question: "Am I eligible to invest?",
-    answer: "Our current round is open to accredited investors under SEC Regulation D, Rule 506(c). You'll need to meet accreditation criteria such as income or net worth thresholds."
+    answer: "Our current round is open to accredited investors under SEC Regulation D, Rule 506(c). You&apos;ll need to meet accreditation criteria such as income or net worth thresholds."
   },
   {
     id: 3,
@@ -67,7 +67,7 @@ const faqData = [
   },
   {
     id: 13,
-    question: "What is AirPower USA's valuation?",
+    question: "What is AirPower USA&apos;s valuation?",
     answer: "Valuation is based on current offering price and number of shares outstanding. Contact us for current details."
   },
   {
@@ -92,7 +92,7 @@ const faqData = [
   },
   {
     id: 18,
-    question: "What is a Transfer Agent and who is AirPower USA's Transfer Agent?",
+    question: "What is a Transfer Agent and who is AirPower USA&apos;s Transfer Agent?",
     answer: "A transfer agent maintains records of shareholder ownership. The appointed transfer agent will be disclosed in your investor documentation."
   },
   {
@@ -189,7 +189,7 @@ export default function InvestorFAQ({ showTitle = true, className = "" }: Invest
               Investor FAQs
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Get answers to common questions about investing in AirPower USA's Regulation D offering.
+              Get answers to common questions about investing in AirPower USA&apos;s Regulation D offering.
             </p>
           </div>
         )}
