@@ -111,7 +111,7 @@ const applications = [
   {
     id: 6,
     title: "Off-Grid Construction",
-    subtitle: "Jobsite power where the grid cannot reach",
+    subtitle: "Jobsite power where the grid can't reach",
     description: "Power construction equipment, tools, and temporary facilities at remote jobsites. Build infrastructure anywhere without requiring grid connection first.",
     icon: HardHat,
     category: "Industrial",
@@ -254,7 +254,7 @@ export default function UseCases() {
             </span>
           </h2>
           <p className="mt-6 text-lg sm:text-xl leading-8 text-muted-foreground">
-            From farms to AI labs — clean power, anywhere it is needed.
+            From farms to AI labs — clean power, anywhere it's needed.
           </p>
           
           {/* Intro Copy */}
@@ -262,7 +262,7 @@ export default function UseCases() {
             <p className="text-base sm:text-lg leading-relaxed text-muted-foreground">
               AirPower delivers high-capacity, zero-emission energy across industries. Whether powering 
               infrastructure, operations, or innovation, the AirPower Station makes clean energy accessible 
-              in places traditional power cannot reach.
+              in places traditional power can't reach.
             </p>
           </div>
         </div>

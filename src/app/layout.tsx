@@ -12,7 +12,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "AirPower USA | Clean Power From Thin Air",
-  description: "Zero-emission compressed air engine systems powering the future. Deployable clean energy engineered for anywhere the grid can&apos;t reach.",
+  description: "Zero-emission compressed air engine systems powering the future. Deployable clean energy engineered for anywhere the grid can't reach.",
   keywords: ["clean energy", "compressed air engine", "zero emissions", "mobile power", "sustainable technology"],
   authors: [{ name: "AirPower USA" }],
   icons: {
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "AirPower USA | Clean Power From Thin Air",
-    description: "Zero-emission compressed air engine systems powering the future. Deployable clean energy engineered for anywhere the grid can&apos;t reach.",
+    description: "Zero-emission compressed air engine systems powering the future. Deployable clean energy engineered for anywhere the grid can't reach.",
     url: "https://airpowerusa.com",
     siteName: "AirPower USA",
     images: [
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "AirPower USA | Clean Power From Thin Air",
-    description: "Zero-emission compressed air engine systems powering the future. Deployable clean energy engineered for anywhere the grid can&apos;t reach.",
+    description: "Zero-emission compressed air engine systems powering the future. Deployable clean energy engineered for anywhere the grid can't reach.",
     images: ["/media/images/air_tanks.png"],
   },
 };

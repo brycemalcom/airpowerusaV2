@@ -102,7 +102,7 @@ export default function Hero() {
           style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8), 0 0 15px rgba(0,0,0,0.6)' }}
         >
           Deployable zero-emission energy. Powered by compressed air. 
-          Engineered for anywhere the grid cannot reach.
+          Engineered for anywhere the grid can't reach.
         </p>
         
         {/* Enhanced CTA buttons with better contrast */}

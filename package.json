@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build && node scripts/fix-encoding.js",
-    "build:netlify": "next build && node scripts/fix-encoding.js",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "fix-encoding": "node scripts/fix-encoding.js"

@@ -79,7 +79,7 @@ const steps = [
     number: "06",
     icon: Truck,
     title: "Deployment & Use",
-    description: "The AirPower Station can be installed on-site, mounted on trucks, or delivered to remote locations. It&apos;s built to power everything from data centers and grow operations to disaster relief zones and off-grid microgrids.",
+    description: "The AirPower Station can be installed on-site, mounted on trucks, or delivered to remote locations. It's built to power everything from data centers and grow operations to disaster relief zones and off-grid microgrids.",
     visual: {
       type: "image",
       src: "/media/images/airstation_truck.png",
@@ -100,8 +100,8 @@ export default function Technology() {
       setIsMobile(window.innerWidth < 768);
     };
     checkMobile();
-    window.addEventListener(&apos;resize&apos;, checkMobile);
-    return () => window.removeEventListener(&apos;resize&apos;, checkMobile);
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
   const toggleEngineVideoSound = () => {
@@ -139,7 +139,7 @@ export default function Technology() {
           {/* Intro Copy */}
           <div className="mt-8 p-6 rounded-xl bg-background/50 border border-border">
             <p className="text-base sm:text-lg leading-relaxed text-muted-foreground">
-              AirPower&apos;s patented system transforms ambient air into clean, on-demand power using a closed-loop cycle. 
+              AirPower's patented system transforms ambient air into clean, on-demand power using a closed-loop cycle. 
               With no fuel, no combustion, and only cold air as its byproduct, the AirPower Station redefines how energy 
               is generated, stored, and delivered — available in 20-foot (0.5MW) and 40-foot (1.5MW) containerized platforms.
             </p>
@@ -154,10 +154,10 @@ export default function Technology() {
             
             return (
               <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center ${
-                isEven ? &apos;&apos; : &apos;lg:grid-flow-dense&apos;
+                isEven ? '' : 'lg:grid-flow-dense'
               }`}>
                 {/* Content */}
-                <div className={`space-y-6 ${isEven ? &apos;&apos; : &apos;lg:col-start-2&apos;}`}>
+                <div className={`space-y-6 ${isEven ? '' : 'lg:col-start-2'}`}>
                   <div className="flex items-center space-x-4">
                     <div className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 border-2 border-primary/20">
                       <span className="text-base sm:text-lg font-bold text-primary">{step.number}</span>
@@ -184,7 +184,7 @@ export default function Technology() {
                 </div>
 
                 {/* Visual */}
-                <div className={`${isEven ? &apos;&apos; : &apos;lg:col-start-1&apos;}`}>
+                <div className={`${isEven ? '' : 'lg:col-start-1'}`}>
                   <Card className="overflow-hidden">
                     <div className="aspect-[4/3] relative bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center">
                       {/* Conditional rendering based on visual type */}
@@ -194,10 +194,10 @@ export default function Technology() {
                             src={step.visual.src}
                             alt={step.visual.description}
                             style={{
-                              width: &apos;100%&apos;,
-                              height: &apos;100%&apos;,
-                              objectFit: &apos;contain&apos;,
-                              display: &apos;block&apos;
+                              width: '100%',
+                              height: '100%',
+                              objectFit: 'contain',
+                              display: 'block'
                             }}
                           />
                           {/* Subtle gradient overlay for better text contrast if needed */}

@@ -3,10 +3,13 @@
   command = "npm run build"
 
 [build.environment]
-  NODE_VERSION = "18"
+  NODE_VERSION = "20"
   # Prevent HTML entity encoding during build
   NODE_OPTIONS = "--max-old-space-size=4096"
   NEXT_TELEMETRY_DISABLED = "1"
+  # Force UTF-8 encoding
+  LC_ALL = "en_US.UTF-8"
+  LANG = "en_US.UTF-8"
 
 # Next.js function for Netlify
 [[plugins]]

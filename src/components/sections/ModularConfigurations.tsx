@@ -110,8 +110,8 @@ export default function ModularConfigurations() {
       setIsMobile(window.innerWidth < 768);
     };
     checkMobile();
-    window.addEventListener(&apos;resize&apos;, checkMobile);
-    return () => window.removeEventListener(&apos;resize&apos;, checkMobile);
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
   return (
@@ -135,13 +135,13 @@ export default function ModularConfigurations() {
           {/* Intro Copy */}
           <div className="mt-8 p-6 rounded-xl bg-background/50 border border-border">
             <p className="text-base sm:text-lg leading-relaxed text-muted-foreground">
-              The AirPower Station isn&apos;t just one product — it&apos;s a flexible energy platform that adapts to your mission. 
+              The AirPower Station isn't just one product — it's a flexible energy platform that adapts to your mission. 
               Whether truck-mounted or available in 20-foot (0.5MW) and 40-foot (1.5MW) containerized configurations, each unit delivers our full CAE + generator system, 
               with optional BESS for battery storage.
             </p>
             <p className="text-base sm:text-lg leading-relaxed text-muted-foreground mt-4">
-              From mobile operations to permanent grid support, AirPower&apos;s modular design means clean, scalable power — 
-              wherever it&apos;s needed most.
+              From mobile operations to permanent grid support, AirPower's modular design means clean, scalable power — 
+              wherever it's needed most.
             </p>
           </div>
         </div>
@@ -159,22 +159,22 @@ export default function ModularConfigurations() {
                 <div className="relative">
                   {/* Visual rendering */}
                   <div className="aspect-[16/10] relative overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900">
-                    {typeof config.visual === &apos;object&apos; && config.visual.type === &apos;image&apos; ? (
+                    {typeof config.visual === 'object' && config.visual.type === 'image' ? (
                       <img
                         src={config.visual.src}
                         alt={config.visual.alt}
                         style={{
-                          width: &apos;100%&apos;,
-                          height: &apos;100%&apos;,
-                          objectFit: config.title === "BESS-Only Module" ? &apos;contain&apos; : &apos;cover&apos;,
-                          display: &apos;block&apos;,
-                          position: &apos;absolute&apos;,
+                          width: '100%',
+                          height: '100%',
+                          objectFit: config.title === "BESS-Only Module" ? 'contain' : 'cover',
+                          display: 'block',
+                          position: 'absolute',
                           top: 0,
                           left: 0,
                           zIndex: 1
                         }}
                       />
-                    ) : typeof config.visual === &apos;object&apos; && config.visual.type === &apos;video&apos; ? (
+                    ) : typeof config.visual === 'object' && config.visual.type === 'video' ? (
                       <>
                         {/* Video for desktop */}
                         {!isMobile ? (
@@ -208,7 +208,7 @@ export default function ModularConfigurations() {
                         <div className="text-center">
                           <Icon className="h-16 w-16 sm:h-20 sm:w-20 text-muted-foreground mx-auto mb-4" />
                           <p className="text-sm text-muted-foreground px-4">
-                            {typeof config.visual === &apos;string&apos; ? config.visual : &apos;Coming Soon&apos;}
+                            {typeof config.visual === 'string' ? config.visual : 'Coming Soon'}
                           </p>
                         </div>
                       </div>
