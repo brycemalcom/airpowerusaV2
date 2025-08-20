@@ -291,16 +291,16 @@ export default function UseCases() {
                 {/* Visual Header */}
                 <div className="aspect-[4/3] relative overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900">
                                     {/* Conditional rendering for image vs placeholder */}
-                  {typeof app.visual === &apos;object&apos; && app.visual.type === &apos;image&apos; ? (
+                  {typeof app.visual === 'object' && app.visual.type === 'image' ? (
                     <img
                       src={(app.visual as { type: string; src: string; alt: string }).src}
                       alt={(app.visual as { type: string; src: string; alt: string }).alt}
                       style={{
-                        width: &apos;100%&apos;,
-                        height: &apos;100%&apos;,
-                        objectFit: &apos;cover&apos;,
-                        display: &apos;block&apos;,
-                        position: &apos;absolute&apos;,
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        display: 'block',
+                        position: 'absolute',
                         top: 0,
                         left: 0,
                         zIndex: 1
@@ -311,11 +311,11 @@ export default function UseCases() {
                       <div className="text-center">
                         <Icon className="h-12 w-12 sm:h-16 sm:w-16 text-muted-foreground mx-auto mb-4" />
                         <p className="text-xs sm:text-sm text-muted-foreground px-4">
-                          {typeof app.visual === &apos;object&apos; && app.visual.type === &apos;placeholder&apos; 
+                          {typeof app.visual === 'object' && app.visual.type === 'placeholder' 
                             ? (app.visual as { type: string; placeholder: string }).placeholder
-                            : typeof app.visual === &apos;string&apos; 
+                            : typeof app.visual === 'string' 
                             ? app.visual 
-                            : &apos;Coming Soon&apos;}
+                            : 'Coming Soon'}
                         </p>
                       </div>
                     </div>
@@ -329,7 +329,7 @@ export default function UseCases() {
                   {/* ID number */}
                   <div className="absolute bottom-4 right-4 w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-primary/20 backdrop-blur-sm flex items-center justify-center">
                     <span className="text-xs sm:text-sm font-bold text-primary">
-                      {app.id.toString().padStart(2, &apos;0&apos;)}
+                      {app.id.toString().padStart(2, '0')}
                     </span>
                   </div>
                 </div>
