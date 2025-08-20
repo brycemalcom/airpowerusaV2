@@ -135,7 +135,7 @@ export default function FilingsPage() {
             </h2>
             <p className="text-lg text-white/80 max-w-3xl mx-auto">
               Our official Form D filing with the Securities and Exchange Commission for our Regulation D offering. 
-              All information is publicly available through the SEC's EDGAR database.
+              All information is publicly available through the SEC&apos;s EDGAR database.
             </p>
           </div>
 
@@ -242,7 +242,7 @@ export default function FilingsPage() {
                 <h3 className="text-lg font-semibold text-white mb-2">Official SEC Documentation</h3>
                 <p className="text-white/80 text-sm leading-relaxed">
                   This Form D filing is the official record of our Regulation D offering filed with the U.S. Securities and Exchange Commission. 
-                  The information contained herein is publicly available through the SEC's EDGAR database and represents our commitment to 
+                  The information contained herein is publicly available through the SEC&apos;s EDGAR database and represents our commitment to 
                   regulatory compliance and transparency with investors. 
                   <a 
                     href={secFilingData.officialUrl}

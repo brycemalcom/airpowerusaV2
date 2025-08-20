@@ -13,7 +13,7 @@ const faqData = [
   {
     id: 2,
     question: "Am I eligible to invest?",
-    answer: "Our current round is open to accredited investors under SEC Regulation D, Rule 506(c). You'll need to meet accreditation criteria such as income or net worth thresholds."
+    answer: "Our current round is open to accredited investors under SEC Regulation D, Rule 506(c). You&apos;ll need to meet accreditation criteria such as income or net worth thresholds."
   },
   {
     id: 3,
@@ -67,7 +67,7 @@ const faqData = [
   },
   {
     id: 13,
-    question: "What is AirPower USA's valuation?",
+    question: "What is AirPower USA&apos;s valuation?",
     answer: "Valuation is based on current offering price and number of shares outstanding. Contact us for current details."
   },
   {

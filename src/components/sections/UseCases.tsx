@@ -111,7 +111,7 @@ const applications = [
   {
     id: 6,
     title: "Off-Grid Construction",
-    subtitle: "Jobsite power where the grid can't reach",
+    subtitle: "Jobsite power where the grid can&apos;t reach",
     description: "Power construction equipment, tools, and temporary facilities at remote jobsites. Build infrastructure anywhere without requiring grid connection first.",
     icon: HardHat,
     category: "Industrial",
@@ -254,7 +254,7 @@ export default function UseCases() {
             </span>
           </h2>
           <p className="mt-6 text-lg sm:text-xl leading-8 text-muted-foreground">
-            From farms to AI labs — clean power, anywhere it's needed.
+            From farms to AI labs — clean power, anywhere it&apos;s needed.
           </p>
           
           {/* Intro Copy */}
@@ -262,7 +262,7 @@ export default function UseCases() {
             <p className="text-base sm:text-lg leading-relaxed text-muted-foreground">
               AirPower delivers high-capacity, zero-emission energy across industries. Whether powering 
               infrastructure, operations, or innovation, the AirPower Station makes clean energy accessible 
-              in places traditional power can't reach.
+              in places traditional power can&apos;t reach.
             </p>
           </div>
         </div>
@@ -291,16 +291,16 @@ export default function UseCases() {
                 {/* Visual Header */}
                 <div className="aspect-[4/3] relative overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900">
                                     {/* Conditional rendering for image vs placeholder */}
-                  {typeof app.visual === 'object' && app.visual.type === 'image' ? (
+                  {typeof app.visual === &apos;object&apos; && app.visual.type === &apos;image&apos; ? (
                     <img
                       src={(app.visual as { type: string; src: string; alt: string }).src}
                       alt={(app.visual as { type: string; src: string; alt: string }).alt}
                       style={{
-                        width: '100%',
-                        height: '100%',
-                        objectFit: 'cover',
-                        display: 'block',
-                        position: 'absolute',
+                        width: &apos;100%&apos;,
+                        height: &apos;100%&apos;,
+                        objectFit: &apos;cover&apos;,
+                        display: &apos;block&apos;,
+                        position: &apos;absolute&apos;,
                         top: 0,
                         left: 0,
                         zIndex: 1
@@ -311,11 +311,11 @@ export default function UseCases() {
                       <div className="text-center">
                         <Icon className="h-12 w-12 sm:h-16 sm:w-16 text-muted-foreground mx-auto mb-4" />
                         <p className="text-xs sm:text-sm text-muted-foreground px-4">
-                          {typeof app.visual === 'object' && app.visual.type === 'placeholder' 
+                          {typeof app.visual === &apos;object&apos; && app.visual.type === &apos;placeholder&apos; 
                             ? (app.visual as { type: string; placeholder: string }).placeholder
-                            : typeof app.visual === 'string' 
+                            : typeof app.visual === &apos;string&apos; 
                             ? app.visual 
-                            : 'Coming Soon'}
+                            : &apos;Coming Soon&apos;}
                         </p>
                       </div>
                     </div>
@@ -329,7 +329,7 @@ export default function UseCases() {
                   {/* ID number */}
                   <div className="absolute bottom-4 right-4 w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-primary/20 backdrop-blur-sm flex items-center justify-center">
                     <span className="text-xs sm:text-sm font-bold text-primary">
-                      {app.id.toString().padStart(2, '0')}
+                      {app.id.toString().padStart(2, &apos;0&apos;)}
                     </span>
                   </div>
                 </div>
