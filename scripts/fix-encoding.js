@@ -13,15 +13,29 @@ function fixEncodingInFile(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     let hasChanges = false;
     
-    // Fix common HTML entities that cause display issues
-    const fixes = [
-      { search: /&apos;/g, replace: "'" },
-      { search: /&#x27;/g, replace: "'" },
-      { search: /&#39;/g, replace: "'" },
-      { search: /&quot;/g, replace: '"' },
-      { search: /&#x22;/g, replace: '"' },
-      { search: /&#34;/g, replace: '"' }
-    ];
+    // For pre-build: Convert apostrophes TO HTML entities (for build compatibility)
+    // For post-build: Convert HTML entities back to apostrophes (for display)
+    const isPreBuild = process.argv.includes('--pre-build');
+    
+    let fixes;
+    if (isPreBuild) {
+      // Pre-build: Convert apostrophes in text content to HTML entities
+      fixes = [
+        // Only convert apostrophes in strings, not in JavaScript syntax
+        { search: /(\w+:\s*["'])([^"']*)'([^"']*)(["'])/g, replace: "$1$2&apos;$3$4" },
+        { search: /(>\s*)([^<]*)'([^<]*?)(\s*<)/g, replace: "$1$2&apos;$3$4" },
+      ];
+    } else {
+      // Post-build: Convert HTML entities back to normal characters for display
+      fixes = [
+        { search: /&apos;/g, replace: "'" },
+        { search: /&#x27;/g, replace: "'" },
+        { search: /&#39;/g, replace: "'" },
+        { search: /&quot;/g, replace: '"' },
+        { search: /&#x22;/g, replace: '"' },
+        { search: /&#34;/g, replace: '"' }
+      ];
+    }
     
     fixes.forEach(fix => {
       if (fix.search.test(content)) {
