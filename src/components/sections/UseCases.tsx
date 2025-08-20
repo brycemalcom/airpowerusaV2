@@ -312,7 +312,7 @@ export default function UseCases() {
                         <Icon className="h-12 w-12 sm:h-16 sm:w-16 text-muted-foreground mx-auto mb-4" />
                         <p className="text-xs sm:text-sm text-muted-foreground px-4">
                           {typeof app.visual === 'object' && app.visual.type === 'placeholder' 
-                            ? (app.visual as { type: string; placeholder: string }).placeholder
+                            ? (app.visual as any).placeholder
                             : typeof app.visual === 'string' 
                             ? app.visual 
                             : 'Coming Soon'}
