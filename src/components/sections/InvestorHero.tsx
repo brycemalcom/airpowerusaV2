@@ -93,7 +93,10 @@ export default function InvestorHero() {
         {/* Badge */}
         <div className="mb-8">
           <div className="relative inline-block">
-            <Badge className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-6 py-3 text-sm font-bold uppercase tracking-wide">
+            <Badge 
+              className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-400 hover:to-cyan-400 text-white px-6 py-3 text-sm font-bold uppercase tracking-wide cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-lg"
+              onClick={() => window.location.href = '/filings'}
+            >
               <TrendingUp className="mr-2 h-4 w-4" />
               Reg D - Round I Now Open
             </Badge>
@@ -108,7 +111,8 @@ export default function InvestorHero() {
               {showTooltip && (
                 <div className="absolute top-full left-0 mt-2 w-80 p-4 bg-white text-black rounded-lg shadow-xl border z-[100]">
                   <p className="font-semibold mb-2 text-black">What is Regulation D?</p>
-                  <p className="text-gray-700 text-sm leading-relaxed">Regulation D allows private companies to raise funds from accredited investors without a full SEC registration.</p>
+                  <p className="text-gray-700 text-sm leading-relaxed mb-2">Regulation D allows private companies to raise funds from accredited investors without a full SEC registration.</p>
+                  <p className="text-blue-600 text-xs font-medium">💡 Click the badge to view our official SEC Form D filing</p>
                 </div>
               )}
             </div>

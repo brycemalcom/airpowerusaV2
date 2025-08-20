@@ -64,7 +64,7 @@ export default function WhyAirPower() {
             </span>
           </h2>
           <p className="mt-6 text-lg sm:text-xl leading-8 text-muted-foreground">
-            Revolutionary technology that delivers clean energy where others can&apos;t
+            Revolutionary technology that delivers clean energy where others can't
           </p>
         </div>
 

@@ -5,7 +5,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About Us | AirPower USA",
-  description: "Learn about AirPower USA&apos;s mission to redefine clean, reliable, and deployable power with patented compressed air technology. Discover our story, values, and vision for the future.",
+  description: "Learn about AirPower USA's mission to redefine clean, reliable, and deployable power with patented compressed air technology. Discover our story, values, and vision for the future.",
   keywords: "AirPower USA about, company mission, clean energy technology, compressed air engine, zero emissions power",
 };
 

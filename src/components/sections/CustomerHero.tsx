@@ -123,7 +123,7 @@ export default function CustomerHero() {
           className="mx-auto mt-8 max-w-4xl text-lg leading-relaxed text-white sm:text-xl lg:text-2xl font-light"
           style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8), 0 0 15px rgba(0,0,0,0.6)' }}
         >
-          Whether you&apos;re deploying grow ops, disaster response, or utility-scale microgrids—Air-Power delivers clean, portable energy where others can&apos;t.
+          Whether you're deploying grow ops, disaster response, or utility-scale microgrids—Air-Power delivers clean, portable energy where others can't.
         </p>
         
         {/* Enhanced CTA buttons */}

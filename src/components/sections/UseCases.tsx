@@ -81,7 +81,7 @@ const applications = [
     category: "Community",
     visual: {
       type: "image",
-      src: "/media/images/remote_community.jpeg",
+      src: "/media/images/remote.jpeg",
       alt: "Remote off-grid community powered by AirPower Station"
     },
     categoryColor: "bg-purple-500",
@@ -111,7 +111,7 @@ const applications = [
   {
     id: 6,
     title: "Off-Grid Construction",
-    subtitle: "Jobsite power where the grid can&apos;t reach",
+    subtitle: "Jobsite power where the grid can't reach",
     description: "Power construction equipment, tools, and temporary facilities at remote jobsites. Build infrastructure anywhere without requiring grid connection first.",
     icon: HardHat,
     category: "Industrial",
@@ -188,8 +188,9 @@ const applications = [
     icon: Shield,
     category: "Defense",
     visual: {
-      type: "placeholder",
-      placeholder: "Military Base Power System"
+      type: "image",
+      src: "/media/images/base.jpeg",
+      alt: "Military base powered by AirPower Station with secure off-grid energy systems"
     },
     categoryColor: "bg-slate-600",
     tags: [
@@ -205,8 +206,9 @@ const applications = [
     icon: Anchor,
     category: "Defense",
     visual: {
-      type: "placeholder",
-      placeholder: "Naval Defense Power"
+      type: "image",
+      src: "/media/images/navy.jpeg",
+      alt: "Naval defense operations powered by AirPower Station for maritime and shipboard applications"
     },
     categoryColor: "bg-slate-600",
     tags: [
@@ -252,7 +254,7 @@ export default function UseCases() {
             </span>
           </h2>
           <p className="mt-6 text-lg sm:text-xl leading-8 text-muted-foreground">
-            From farms to AI labs — clean power, anywhere it&apos;s needed.
+            From farms to AI labs — clean power, anywhere it's needed.
           </p>
           
           {/* Intro Copy */}
@@ -260,7 +262,7 @@ export default function UseCases() {
             <p className="text-base sm:text-lg leading-relaxed text-muted-foreground">
               AirPower delivers high-capacity, zero-emission energy across industries. Whether powering 
               infrastructure, operations, or innovation, the AirPower Station makes clean energy accessible 
-              in places traditional power can&apos;t reach.
+              in places traditional power can't reach.
             </p>
           </div>
         </div>

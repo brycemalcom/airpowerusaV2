@@ -115,7 +115,7 @@ export default function InquiryForm() {
                 Thank You!
               </h3>
               <p className="text-lg text-muted-foreground mb-6">
-                We&apos;ve received your inquiry and will get back to you within 1 business day.
+                We've received your inquiry and will get back to you within 1 business day.
               </p>
               <Button 
                 variant="outline" 
@@ -147,7 +147,7 @@ export default function InquiryForm() {
             </span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Tell us about your power needs and we&apos;ll provide a customized solution
+            Tell us about your power needs and we'll provide a customized solution
           </p>
         </div>
 
@@ -156,7 +156,7 @@ export default function InquiryForm() {
           <CardHeader>
             <CardTitle className="text-xl">Contact Information</CardTitle>
             <CardDescription>
-              Fill out the form below and we&apos;ll get back to you with detailed information about how AirPower can solve your energy challenges.
+              Fill out the form below and we'll get back to you with detailed information about how AirPower can solve your energy challenges.
             </CardDescription>
           </CardHeader>
           
@@ -311,7 +311,7 @@ export default function InquiryForm() {
           <div className="inline-flex items-center space-x-2 text-muted-foreground">
             <Clock className="h-4 w-4" />
             <span className="text-sm">
-              We&apos;ll get back to you within 1 business day to discuss your application needs or schedule a short demo.
+              We'll get back to you within 1 business day to discuss your application needs or schedule a short demo.
             </span>
           </div>
         </div>

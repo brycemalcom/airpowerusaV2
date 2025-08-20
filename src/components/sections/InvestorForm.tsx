@@ -105,7 +105,7 @@ export default function InvestorForm() {
                 Thank You for Your Interest!
               </h3>
               <p className="text-lg text-white/80 mb-6">
-                We&apos;ve received your investment inquiry and will send you the investor packet within 24 hours.
+                We've received your investment inquiry and will send you the investor packet within 24 hours.
               </p>
               <Button 
                 variant="outline" 
@@ -146,7 +146,7 @@ export default function InvestorForm() {
           <CardHeader>
             <CardTitle className="text-xl text-white">Investment Inquiry</CardTitle>
             <CardDescription className="text-white/70">
-              Complete the form below and we&apos;ll send you our comprehensive investor packet with detailed financials, market analysis, and offering terms.
+              Complete the form below and we'll send you our comprehensive investor packet with detailed financials, market analysis, and offering terms.
             </CardDescription>
           </CardHeader>
           

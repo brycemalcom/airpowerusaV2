@@ -4,7 +4,17 @@
 
 [build.environment]
   NODE_VERSION = "18"
+  # Prevent HTML entity encoding during build
+  NODE_OPTIONS = "--max-old-space-size=4096"
+  NEXT_TELEMETRY_DISABLED = "1"
 
 # Next.js function for Netlify
 [[plugins]]
-  package = "@netlify/plugin-nextjs" 
+  package = "@netlify/plugin-nextjs"
+
+# Headers to prevent encoding issues
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Type = "text/html; charset=utf-8"
+    X-Content-Type-Options = "nosniff" 

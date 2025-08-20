@@ -38,7 +38,7 @@ const marketStats = [
   {
     value: "40%",
     label: "of the World Lacks Reliable Grid Access",
-    description: "Our solution is engineered for where the grid can&apos;t reach.",
+    description: "Our solution is engineered for where the grid can't reach.",
     icon: Globe,
     growth: "2.8B People"
   }
@@ -90,7 +90,7 @@ export default function MarketOpportunity() {
               all with one modular, deployable system.
             </p>
             <p className="text-lg leading-relaxed text-muted-foreground mt-4 font-semibold">
-              We&apos;re not just solving one problem. We&apos;re unlocking a whole new category.
+              We're not just solving one problem. We're unlocking a whole new category.
             </p>
           </div>
         </div>
@@ -148,7 +148,7 @@ export default function MarketOpportunity() {
               Why This Opportunity Matters Now
             </h3>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Multiple converging trends create an unprecedented window for AirPower&apos;s revolutionary technology
+              Multiple converging trends create an unprecedented window for AirPower's revolutionary technology
             </p>
           </div>
 
@@ -185,7 +185,7 @@ export default function MarketOpportunity() {
               </div>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Conservative estimate combining generator replacement, EV infrastructure, and battery storage markets. 
-                AirPower&apos;s unique position enables capture across all three verticals.
+                AirPower's unique position enables capture across all three verticals.
               </p>
             </div>
           </Card>

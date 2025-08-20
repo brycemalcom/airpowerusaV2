@@ -19,7 +19,7 @@ const pressReleases = [
   {
     id: 2,
     title: "Company News", 
-    excerpt: "Stay updated on AirPower USA&apos;s latest developments, partnerships, and breakthrough achievements.",
+    excerpt: "Stay updated on AirPower USA's latest developments, partnerships, and breakthrough achievements.",
     date: "Coming Soon",
     category: "Company News",
     link: "#",
@@ -139,7 +139,7 @@ export default function NewsSection() {
               </span>
             </h2>
             <p className="mt-6 text-lg leading-8 text-muted-foreground">
-              Industry publications and media outlets covering AirPower&apos;s technology and market impact.
+              Industry publications and media outlets covering AirPower's technology and market impact.
             </p>
           </div>
 

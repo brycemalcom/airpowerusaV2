@@ -79,7 +79,7 @@ const steps = [
     number: "06",
     icon: Truck,
     title: "Deployment & Use",
-    description: "The AirPower Station can be installed on-site, mounted on trucks, or delivered to remote locations. It&apos;s built to power everything from data centers and grow operations to disaster relief zones and off-grid microgrids.",
+    description: "The AirPower Station can be installed on-site, mounted on trucks, or delivered to remote locations. It's built to power everything from data centers and grow operations to disaster relief zones and off-grid microgrids.",
     visual: {
       type: "image",
       src: "/media/images/airstation_truck.png",
@@ -139,7 +139,7 @@ export default function Technology() {
           {/* Intro Copy */}
           <div className="mt-8 p-6 rounded-xl bg-background/50 border border-border">
             <p className="text-base sm:text-lg leading-relaxed text-muted-foreground">
-              AirPower&apos;s patented system transforms ambient air into clean, on-demand power using a closed-loop cycle. 
+              AirPower's patented system transforms ambient air into clean, on-demand power using a closed-loop cycle. 
               With no fuel, no combustion, and only cold air as its byproduct, the AirPower Station redefines how energy 
               is generated, stored, and delivered — available in 20-foot (0.5MW) and 40-foot (1.5MW) containerized platforms.
             </p>

@@ -5,7 +5,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Investor FAQs | AirPower USA",
-  description: "Frequently asked questions about investing in AirPower USA&apos;s Regulation D offering. Get answers about eligibility, investment process, and more.",
+  description: "Frequently asked questions about investing in AirPower USA's Regulation D offering. Get answers about eligibility, investment process, and more.",
   keywords: "investor FAQs, AirPower USA investment, Regulation D, accredited investors, investment questions",
 };
 
@@ -51,7 +51,7 @@ export default function InvestorFAQsPage() {
             className="mx-auto mt-8 max-w-3xl text-lg leading-relaxed text-white/90 sm:text-xl lg:text-2xl font-light"
             style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.8), 0 0 15px rgba(0,0,0,0.6)' }}
           >
-            Get answers to frequently asked questions about investing in AirPower USA&apos;s Regulation D offering.
+            Get answers to frequently asked questions about investing in AirPower USA's Regulation D offering.
           </p>
 
           {/* Key stats */}

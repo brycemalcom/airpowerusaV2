@@ -65,7 +65,7 @@ const customerSegments = [
   {
     id: 6,
     title: "EV Charging & Transport",
-    description: "Clean power where grid access can&apos;t reach",
+    description: "Clean power where grid access can't reach",
     icon: Car,
     category: "Mobility",
     details: "Rapid-deploy energy stations and mobile charging infrastructure for electric vehicle hubs, rest stops, utility fleets, and edge mobility applications—powered by compressed air.",
@@ -155,7 +155,7 @@ export default function WhoWeServe() {
               <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                 Our mobile 50kW AirPack and scalable BESS systems provide emissions-free power for the hardest-to-reach locations. 
                 With <span className="text-primary font-medium">$77M+</span> in active proposals and multiple international test units built, 
-                we&apos;re ready to power your mission-critical operations.
+                we're ready to power your mission-critical operations.
               </p>
             </div>
           </div>

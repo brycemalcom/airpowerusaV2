@@ -20,7 +20,7 @@ const videos = [
   {
     id: 2,
     title: "AirPower CAE Start-Up & Power Demonstration",
-    description: "Watch the AirPower Compressed Air Engine come online in our controlled test environment. This demo features full system start-up, cold air exhaust venting at -20°C, and sequential activation of high-output industrial lighting—proof of the platform&apos;s rapid response, stable output, and clean, reliable power delivery.",
+    description: "Watch the AirPower Compressed Air Engine come online in our controlled test environment. This demo features full system start-up, cold air exhaust venting at -20°C, and sequential activation of high-output industrial lighting—proof of the platform's rapid response, stable output, and clean, reliable power delivery.",
     src: "https://airpowe-videos.s3.us-east-2.amazonaws.com/cae_startup2.mp4",
     thumbnail: "/media/images/tech_thumbnail.png",
     thumbnailType: "image",

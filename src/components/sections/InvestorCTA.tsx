@@ -135,7 +135,7 @@ export default function InvestorCTA() {
 
             <div className="p-6 rounded-xl bg-background/50 border border-border backdrop-blur-sm">
               <p className="text-lg leading-relaxed text-muted-foreground">
-                We&apos;re seeking strategic investors to help scale production and meet demand. With over $30M in active 
+                We're seeking strategic investors to help scale production and meet demand. With over $30M in active 
                 interest and a proven technology platform, AirPower is positioned for rapid growth.
               </p>
               <p className="text-lg leading-relaxed text-muted-foreground mt-4 font-semibold">

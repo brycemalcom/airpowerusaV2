@@ -19,7 +19,7 @@ export default function VideoGalleryPage() {
               in Action
             </h1>
             <p className="mt-6 text-lg sm:text-xl leading-8 text-white/80">
-              Experience AirPower&apos;s revolutionary compressed air energy solutions through comprehensive demonstrations, technical deep-dives, and real-world field testing.
+              Experience AirPower's revolutionary compressed air energy solutions through comprehensive demonstrations, technical deep-dives, and real-world field testing.
             </p>
           </div>
         </div>
