@@ -32,7 +32,7 @@ const secFilingData = {
   totalOfferingAmount: 25000000,
   totalAmountSold: 0,
   totalRemaining: 25000000,
-  minimumInvestment: 5000,
+  minimumInvestment: 10000,
   hasNonAccreditedInvestors: false,
   totalInvestors: 0,
   salesCommissions: 0,
@@ -105,7 +105,7 @@ export default function FilingsPage() {
               </div>
               <div className="hidden sm:block w-px h-12 bg-white/20"></div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-orange-400">$5K</div>
+                <div className="text-2xl font-bold text-orange-400">$10K</div>
                 <div className="text-sm text-white/70">Min Investment</div>
               </div>
               <div className="hidden sm:block w-px h-12 bg-white/20"></div>

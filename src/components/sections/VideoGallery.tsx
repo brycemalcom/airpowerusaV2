@@ -53,8 +53,24 @@ export default function VideoGallery() {
   const [selectedVideo, setSelectedVideo] = useState<typeof videos[0] | null>(null);
 
   return (
-    <section className="py-16 bg-background">
+    <section className="py-24 bg-background">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        
+        {/* Header */}
+        <div className="mx-auto max-w-3xl text-center mb-16">
+          <Badge variant="secondary" className="mb-4">
+            Video Content
+          </Badge>
+          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            Video
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-300">
+              Gallery
+            </span>
+          </h2>
+          <p className="mt-6 text-lg leading-8 text-muted-foreground">
+            See AirPower technology in action with product demonstrations and behind-the-scenes content.
+          </p>
+        </div>
 
         {/* Video Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

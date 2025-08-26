@@ -290,21 +290,34 @@ export default function UseCases() {
               >
                 {/* Visual Header */}
                 <div className="aspect-[4/3] relative overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900">
-                                    {/* All applications now have images */}
-                  <img
-                    src={(app.visual as { type: string; src: string; alt: string }).src}
-                    alt={(app.visual as { type: string; src: string; alt: string }).alt}
-                    style={{
-                      width: '100%',
-                      height: '100%',
-                      objectFit: 'cover',
-                      display: 'block',
-                      position: 'absolute',
-                      top: 0,
-                      left: 0,
-                      zIndex: 1
-                    }}
-                  />
+                                    {/* Conditional rendering for image vs placeholder */}
+                  {typeof app.visual === 'object' && app.visual.type === 'image' ? (
+                    <img
+                      src={(app.visual as { type: string; src: string; alt: string }).src}
+                      alt={(app.visual as { type: string; src: string; alt: string }).alt}
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        display: 'block',
+                        position: 'absolute',
+                        top: 0,
+                        left: 0,
+                        zIndex: 1
+                      }}
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="text-center">
+                        <Icon className="h-12 w-12 sm:h-16 sm:w-16 text-muted-foreground mx-auto mb-4" />
+                        <p className="text-xs sm:text-sm text-muted-foreground px-4">
+                          {typeof app.visual === 'string' 
+                            ? app.visual 
+                            : 'Coming Soon'}
+                        </p>
+                      </div>
+                    </div>
+                  )}
                   
 
                   
