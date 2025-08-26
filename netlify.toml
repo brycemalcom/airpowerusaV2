@@ -1,23 +1,11 @@
 [build]
-  publish = ".next"
   command = "npm run build"
 
 [build.environment]
-  NODE_VERSION = "20"
-  # Prevent HTML entity encoding during build
-  NODE_OPTIONS = "--max-old-space-size=4096"
+  NODE_VERSION = "18"
+  NPM_FLAGS = "--production=false"
   NEXT_TELEMETRY_DISABLED = "1"
-  # Force UTF-8 encoding
-  LC_ALL = "en_US.UTF-8"
-  LANG = "en_US.UTF-8"
 
-# Next.js function for Netlify
+# Essential Next.js plugin for Netlify
 [[plugins]]
   package = "@netlify/plugin-nextjs"
-
-# Headers to prevent encoding issues
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Content-Type = "text/html; charset=utf-8"
-    X-Content-Type-Options = "nosniff" 
