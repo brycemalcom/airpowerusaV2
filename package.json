@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build && node scripts/fix-encoding.js",
     "build:netlify": "next build && node scripts/fix-encoding.js",
+    "build:vercel": "next build && node scripts/fix-encoding.js",
     "start": "next start",
     "lint": "next lint",
     "fix-encoding": "node scripts/fix-encoding.js"
