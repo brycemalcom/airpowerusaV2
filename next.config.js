@@ -30,7 +30,7 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production' ? { exclude: ['error'] } : false,
   },
   
-  // Output configuration - removed standalone for Netlify compatibility
+  // Output configuration
   // output: 'standalone',
   trailingSlash: false,
   

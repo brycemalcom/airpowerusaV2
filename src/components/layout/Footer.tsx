@@ -39,7 +39,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center text-sm text-muted-foreground">
                 <Phone className="mr-2 h-4 w-4" />
-                +1 (555) 123-4567
+                (760) 533-8590
               </div>
               <div className="flex items-center text-sm text-muted-foreground">
                 <MapPin className="mr-2 h-4 w-4" />

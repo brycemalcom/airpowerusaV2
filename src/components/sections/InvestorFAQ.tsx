@@ -53,7 +53,7 @@ const faqData = [
   {
     id: 10,
     question: "Is there a direct number for the AirPower USA Investor Relations Team?",
-    answer: "Yes — investor inquiries can be made at (phone number pending)."
+    answer: "Yes — investor inquiries can be made at (760) 533-8590."
   },
   {
     id: 11,
@@ -220,7 +220,7 @@ export default function InvestorFAQ({ showTitle = true, className = "" }: Invest
                 invest@airpowerusa.com
               </a>
               <div className="text-slate-600">
-                <span className="font-medium">Phone:</span> (phone number pending)
+                <span className="font-medium">Phone:</span> (760) 533-8590
               </div>
             </div>
           </div>
