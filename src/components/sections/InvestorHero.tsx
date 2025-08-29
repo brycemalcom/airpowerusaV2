@@ -2,13 +2,17 @@
 
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Download, ArrowRight, TrendingUp } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Download, ArrowRight, TrendingUp, X } from "lucide-react";
 import { useRef, useEffect, useState } from "react";
 
 export default function InvestorHero() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isMobile, setIsMobile] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
+  const [showSummaryModal, setShowSummaryModal] = useState(false);
+  const [summaryFormData, setSummaryFormData] = useState({ name: '', email: '' });
 
   useEffect(() => {
     // Check if mobile device
@@ -54,6 +58,16 @@ export default function InvestorHero() {
         block: 'start'
       });
     }
+  };
+
+  const handleSummarySubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Here you would typically send the data to your backend
+    console.log('Summary request:', summaryFormData);
+    // For now, just close the modal and show success
+    setShowSummaryModal(false);
+    setSummaryFormData({ name: '', email: '' });
+    alert('Thank you! Your investment summary will be sent to your email shortly.');
   };
 
   return (
@@ -181,6 +195,7 @@ export default function InvestorHero() {
             variant="outline" 
             size="lg" 
             className="group relative border-2 border-white/30 bg-white/10 backdrop-blur-lg hover:bg-white/20 hover:border-white/50 text-white px-10 py-6 text-lg font-semibold transition-all duration-300 shadow-xl hover:shadow-white/20 hover:scale-105"
+            onClick={() => setShowSummaryModal(true)}
             style={{ 
               textShadow: '1px 1px 2px rgba(0,0,0,0.8)',
               boxShadow: '0 8px 32px rgba(255,255,255,0.1), inset 0 1px 0 rgba(255,255,255,0.1)'
@@ -210,6 +225,75 @@ export default function InvestorHero() {
       
       {/* Bottom gradient fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background/90 to-transparent z-10" />
+
+      {/* Investment Summary Modal */}
+      {showSummaryModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
+          {/* Backdrop */}
+          <div 
+            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+            onClick={() => setShowSummaryModal(false)}
+          />
+          
+          {/* Modal Content */}
+          <div className="relative bg-background/95 backdrop-blur-md rounded-xl p-8 max-w-md w-full mx-4 border border-border shadow-2xl">
+            {/* Close Button */}
+            <button
+              onClick={() => setShowSummaryModal(false)}
+              className="absolute top-4 right-4 text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <X className="h-6 w-6" />
+            </button>
+
+            {/* Modal Header */}
+            <div className="text-center mb-6">
+              <h3 className="text-2xl font-bold text-foreground mb-2">
+                Get Your AirPower USA Investment Summary
+              </h3>
+              <p className="text-muted-foreground">
+                Where should we send it?
+              </p>
+            </div>
+
+            {/* Form */}
+            <form onSubmit={handleSummarySubmit} className="space-y-4">
+              <div>
+                <Label htmlFor="modal-name" className="text-foreground">Name</Label>
+                <Input
+                  id="modal-name"
+                  type="text"
+                  required
+                  value={summaryFormData.name}
+                  onChange={(e) => setSummaryFormData({ ...summaryFormData, name: e.target.value })}
+                  placeholder="Your full name"
+                  className="mt-1"
+                />
+              </div>
+
+              <div>
+                <Label htmlFor="modal-email" className="text-foreground">Email</Label>
+                <Input
+                  id="modal-email"
+                  type="email"
+                  required
+                  value={summaryFormData.email}
+                  onChange={(e) => setSummaryFormData({ ...summaryFormData, email: e.target.value })}
+                  placeholder="your.email@example.com"
+                  className="mt-1"
+                />
+              </div>
+
+              <Button 
+                type="submit"
+                className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-semibold py-3 mt-6"
+              >
+                <Download className="mr-2 h-4 w-4" />
+                Send My Summary
+              </Button>
+            </form>
+          </div>
+        </div>
+      )}
     </section>
   );
 } 

@@ -9,10 +9,9 @@ const navigation = {
     { name: "About", href: "/about" },
   ],
   support: [
-    { name: "Documentation", href: "#docs" },
-    { name: "Support", href: "#support" },
-    { name: "Contact", href: "#contact" },
-    { name: "Investor Relations", href: "#investors" },
+    { name: "Documentation", href: "/filings" },
+    { name: "Contact", href: "/contact" },
+    { name: "Investor Relations", href: "/invest" },
     { name: "Investor FAQs", href: "/investor-faqs" },
   ],
 };
@@ -35,15 +34,15 @@ export default function Footer() {
             <div className="mt-6 space-y-2">
               <div className="flex items-center text-sm text-muted-foreground">
                 <Mail className="mr-2 h-4 w-4" />
-                info@airpowerusa.com
+                info@airpowerusa.net
               </div>
               <div className="flex items-center text-sm text-muted-foreground">
                 <Phone className="mr-2 h-4 w-4" />
-                (760) 533-8590
+                (760) 712-2890
               </div>
               <div className="flex items-center text-sm text-muted-foreground">
                 <MapPin className="mr-2 h-4 w-4" />
-                California, USA
+                San Diego, CA | Versailles, France
               </div>
             </div>
           </div>

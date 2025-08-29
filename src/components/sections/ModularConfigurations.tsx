@@ -18,7 +18,7 @@ import {
 const configurations = [
   {
     id: 1,
-    title: "Truck-Mounted Station",
+    title: "AirPack - Truck Mounted Station",
     subtitle: "Mobile response, military-ready",
     description: "Engine + generator mounted in vehicle or flatbed. Ideal for rapid deployment, off-grid ops.",
     icon: Truck,
@@ -32,7 +32,7 @@ const configurations = [
     features: ["Rapid deployment", "Vehicle-integrated", "Military-grade", "Off-grid ready"],
     visual: {
       type: "image",
-      src: "/media/images/airstation_truck.png",
+      src: "/media/images/airpack.png",
       alt: "Truck-mounted AirPower Station for mobile deployment"
     },
     categoryColor: "bg-red-500"
@@ -166,7 +166,7 @@ export default function ModularConfigurations() {
                         style={{
                           width: '100%',
                           height: '100%',
-                          objectFit: config.title === "BESS-Only Module" ? 'contain' : 'cover',
+                          objectFit: config.title === "BESS-Only Module" || config.title === "AirPack - Truck Mounted Station" ? 'contain' : 'cover',
                           display: 'block',
                           position: 'absolute',
                           top: 0,

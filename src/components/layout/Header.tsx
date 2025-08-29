@@ -49,7 +49,7 @@ export default function Header() {
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5 flex items-center space-x-2">
             <Image
-              src="/media/images/airpowerlogo2.png"
+              src="/media/images/airpowerlogowhite2.png"
               alt="AirPower USA Logo"
               width={540}
               height={180}
