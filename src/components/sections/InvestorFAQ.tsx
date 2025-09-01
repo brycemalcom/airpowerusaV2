@@ -78,7 +78,7 @@ const faqData = [
   {
     id: 15,
     question: "Does AirPower USA plan to do an initial public offering (IPO) and if so, when?",
-    answer: "Yes. The company plans to file an S-1 for OTC public listing in Q3/Q4 2025, with the goal of upgrading to NYSE in 2026."
+    answer: "Yes. The company plans to be publicly listed by Q1-Q2 2026, emerging as an NYSE, AMEX, or NASDAQ trading entitiy."
   },
   {
     id: 16,
@@ -131,34 +131,28 @@ interface FAQItemProps {
 
 function FAQItem({ question, answer, isOpen, onToggle }: FAQItemProps) {
   return (
-    <Card className="mb-4 overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10 border-l-4 border-l-transparent hover:border-l-blue-500">
-      <CardContent className="p-0">
-        <button
-          className={`w-full px-6 py-5 text-left flex items-center justify-between transition-all duration-200 ${
-            isOpen 
-              ? 'bg-gradient-to-r from-blue-50 to-cyan-50 hover:from-blue-100 hover:to-cyan-100' 
-              : 'hover:bg-gradient-to-r hover:from-blue-50/50 hover:to-cyan-50/50'
-          }`}
-          onClick={onToggle}
-        >
-          <span className={`font-semibold pr-4 transition-colors ${
-            isOpen ? 'text-blue-900' : 'text-foreground'
-          }`}>{question}</span>
-          {isOpen ? (
-            <ChevronUp className="h-5 w-5 text-blue-600 flex-shrink-0 transition-transform" />
-          ) : (
-            <ChevronDown className="h-5 w-5 text-muted-foreground flex-shrink-0 transition-transform hover:text-blue-600" />
-          )}
-        </button>
-        {isOpen && (
-          <div className="px-6 pb-5 bg-gradient-to-r from-blue-50 to-cyan-50">
-            <div className="pt-4 border-t border-blue-200/50">
-              <p className="text-slate-700 leading-relaxed">{answer}</p>
-            </div>
-          </div>
+    <div className="mb-4 bg-slate-800/50 rounded-2xl overflow-hidden">
+      <button
+        className="w-full px-6 py-5 text-left flex items-center justify-between transition-all duration-300 group hover:bg-slate-700/30"
+        onClick={onToggle}
+      >
+        <span className={`font-semibold pr-4 transition-colors duration-300 ${
+          isOpen ? 'text-blue-400' : 'text-white group-hover:text-blue-400'
+        }`}>{question}</span>
+        {isOpen ? (
+          <ChevronUp className="h-5 w-5 text-blue-400 flex-shrink-0 transition-all duration-300" />
+        ) : (
+          <ChevronDown className="h-5 w-5 text-gray-400 flex-shrink-0 transition-all duration-300 group-hover:text-blue-400" />
         )}
-      </CardContent>
-    </Card>
+      </button>
+      {isOpen && (
+        <div className="px-6 pb-6 border-t border-slate-700/50">
+          <div className="pt-4">
+            <p className="text-gray-300 leading-relaxed">{answer}</p>
+          </div>
+        </div>
+      )}
+    </div>
   );
 }
 
